@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff;
+    padding-top: 120px;
+}
+
+.title{
+    text-align: left;
+    width: 100%;
+    height: auto;
+    padding: 20px 0px 20px 5px;
+    box-shadow: 0px 2px 5px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+.name{
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.picture{ /*垂直致中*/
+    width: 50%;
+    height: 80%;
+    margin: auto;
+    text-align: center;   
+    position: fixed;
+    left: 0;
+}
+
+
+.text{
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    float: right;
+}
+
