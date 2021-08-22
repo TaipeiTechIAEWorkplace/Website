@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+    background-color: #fff;
+    padding-top: 120px;
+}
+
+.title{
+    text-align: left;
+    width: 100%;
+    height: auto;
+    padding: 20px 0px 20px 5px;
+    box-shadow: 0px 2px 5px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+.name{
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.picture{ /*垂直致中*/
+    width: 50%;
+    height: 80%;
+    margin: auto;
+    text-align: center;   
+    position: fixed;
+    left: 0;
+}
+
+
+.text{
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    line-height: 50px;
+    float: right;
+}
+
+.button {
+  background-color: #555555; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
