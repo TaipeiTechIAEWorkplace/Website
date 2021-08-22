@@ -1,2 +1,6 @@
 test
+<<<<<<< HEAD
 123123麥克風測試
+=======
+test
+>>>>>>> 214d1fcebac5b90ba783cf76ac489cad2ae85a85
