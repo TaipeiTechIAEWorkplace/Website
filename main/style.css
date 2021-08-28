@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/* logo設計 */
+#logo{
+    margin-left:30px;
+    margin-top: 12px;
+}
+
+#home_icon{
+    position: relative;
+    left: 1230px;
+}
+
+/* 個人信息 */
+.container{
+    padding:50px;
+    margin:85px;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    border:1px solid black;
+}
+
+#bio{
+    padding-left:100px;
+    width:500px;
+}
+
+.container2{
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+}
+
+#love{
+    position: relative;
+    top:18px;
+    left:90px;
+}
+
+#change{
+    border: 2px solid black; 
+    position: relative; 
+    top:285px; 
+    right:120px; 
+    font-size: 150%;
+}
+
+.meme{
+    display: flex;
+    flex-wrap: wrap; /*不會擠壓方塊，維持100px寬度(我們設定的)*/
+    flex-direction: row; /* 亦有row,row-reverse */
+    border:2px solid black;
+    justify-content: space-around; /* 亦有center,flex-end.flex-start(default),space-between,space-evenly */
+}
+
+.meme div{
+    border:1px solid rgb(102, 32, 75);
+    margin:20px;
+    width:100px;
+    height:100px;
+}
