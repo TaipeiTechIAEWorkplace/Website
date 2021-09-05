@@ -5,18 +5,26 @@
 
 body{
     background-color: #fff;
+    padding-top: 120px;
 }
 
-.above{
-    text-align: right;
-    color: #555555;
-    height: 100px;
+.title{
+    text-align: left;
+    width: 100%;
+    height: auto;
+    padding: 20px 0px 20px 5px;
+    box-shadow: 0px 2px 5px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
 }
 
 .name{
-    width: 50%;
+    width: 100%;
     margin-bottom: 10px;
-    text-align: center;
+    padding-left: 20px;
 }
 
 .picture{ /*垂直致中*/
