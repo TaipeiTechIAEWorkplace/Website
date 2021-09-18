@@ -20,13 +20,14 @@ from django.urls import include
 from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
-from trips.views import hello_world,home
+from trips.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', hello_world),
     path('',home),
     path('trips/', include('trips.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('game/', include('game.urls')),
+    path('memes/', include('memes.urls')),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
