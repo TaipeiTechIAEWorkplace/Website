@@ -61,7 +61,8 @@ function init() {
       ctx.strokeRect(50, 50, 400, 200);
       ctx.font = '20px serif';
       ctx.fillStyle='red';
-      ctx.fillText('影片太多，好不容易找到的時候i學園爆掉了', 65, 90);
+      ctx.fillText('影片太多', 65, 90);
+      ctx.fillText('好不容易找到的時候i學園爆掉了', 65, 90);
     }
     window.requestAnimationFrame(Newdraw3);
   }
