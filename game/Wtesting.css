@@ -1,0 +1,41 @@
+canvas { 
+    border: 1px solid black; 
+}
+.container{
+    margin:0 auto;
+    width: 500px;
+}
+
+.keypress>div {
+    border: dashed 3px #000;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    font-size: -webkit-xxx-large;
+    font-weight: 900;
+    color: #000;
+    transition: .5s;
+    opacity: .1;
+    border-radius: 7px
+}
+
+.keypress {
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    top: 40%;
+    left: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    opacity: 1;
+    user-select: none
+}
+
+.keypress>div:hover {
+    opacity: 1
+}

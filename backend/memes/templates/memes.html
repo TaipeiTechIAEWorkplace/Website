@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        {% block title %}<title>名稱</title>{% endblock %}
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/memes.css' %}">
+    </head>
+    <body>
+
+        <div class="above">
+            <p>123</p>
+        </div>
+
+        <div class="title">
+            <h1>梗圖...</h1>
+        </div>
+
+        <form action="form.js" method="POST" class="search">
+            <div>
+                <label></label>
+                <input type="text" name="search" placeholder="輸入...">
+                <input type="submit" name="search_button" value="搜尋">
+            </div>
+        </form>
+
+        <div class="introduce">
+            <p>
+                介紹Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti corporis asperiores tempore ex maiores obcaecati possimus commodi, iusto dignissimos.
+            </p>
+        </div>
+
+        <button class="upload_button">我要上傳→→</button>
+
+    </body>
+</html>
