@@ -48,6 +48,17 @@ class BookListView(generic.ListView):
 class BookDetailView(generic.DetailView):
     model = Book
 
+def book_detail_view(request, primary_key):
+    try:
+        book = Book.objects.get(pk=primary_key)
+    except Book.DoesNotExist:
+        raise Http404('Book does not exist')
+
+    # from django.shortcuts import get_object_or_404
+    # book = get_object_or_404(Book, pk=primary_key)
+
+    return render(request, 'catalog/book_detail.html', context={'book': book})
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
