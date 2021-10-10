@@ -1,69 +1,74 @@
-function init() {
-    window.requestAnimationFrame(draw);
-  }
-  
-  function draw() {
-    var canvas = document.getElementById('canvas');
-    if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
-      ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-      ctx.strokeRect(50, 50, 400, 200);
-      ctx.font = '24px serif';
-      ctx.fillText('老師正在講必考的習題，你選擇?', 60, 80);
-    }
-    window.requestAnimationFrame(draw);
-  }
-  function emit(t) {
-    if(t == 1){
-        window.requestAnimationFrame(Newdraw1);
-    }
-    else if(t == 2){
-      window.requestAnimationFrame(Newdraw2);
-    }
-    else if(t == 3){
-        window.requestAnimationFrame(Newdraw3);
-    }
-  }
-  
-  function Newdraw1() {
-    var canvas = document.getElementById('canvas');
-    if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
-      ctx.fillStyle='red';
-      ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-      ctx.strokeRect(50, 50, 400, 200);
-      ctx.font = '20px serif';
-      ctx.fillText('拍的七零八落', 65, 90);
-      ctx.fillText('看著照片也一頭霧水', 65, 115);
-      ctx.fillText('因為拍照還輸掉了排位', 65, 140);
-    }
-    window.requestAnimationFrame(Newdraw1);
-  }
+var canvas = document.querySelector('canvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+var ctx = canvas.getContext('2d');
 
-  function Newdraw2() {
-    var canvas = document.getElementById('canvas');
-    if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
-      ctx.fillStyle='black';
-      ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-      ctx.strokeRect(50, 50, 400, 200);
-      ctx.font = '20px serif';
-      ctx.fillText('有人整理好的就是香', 65, 90);
-    }
-    window.requestAnimationFrame(Newdraw2);
-  }
+function isInsideButton(pos,rect){
+    return pos.x >rect.x && pos.x < rect.x + rect.width && pos.y < rect.y + rect.height && pos.y > rect.y
+}
 
-  function Newdraw3() {
-    var canvas = document.getElementById('canvas');
-    if (canvas.getContext) {
-      var ctx = canvas.getContext('2d');
-      ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-      ctx.strokeRect(50, 50, 400, 200);
-      ctx.font = '20px serif';
-      ctx.fillStyle='red';
-      ctx.fillText('影片太多', 65, 90);
-      ctx.fillText('好不容易找到的時候i學園爆掉了', 65, 90);
+function drawButton(name, color, text){
+    ctx.fillStyle = color;
+    ctx.fillRect(name.x, name.y, name.width, name.height);
+    ctx.fillStyle="black";
+    ctx.fillText(text, 0, 0);
+}
+
+function getMousePos(canvas, event){
+    var rect = canvas.getBoundingClientRect();
+    return{
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top
+    };
+}
+
+function question(text){
+    this.x=canvas.width*0.1;
+    this.y=canvas.height*0.8;
+    this.width=canvas.width*0.5;
+    this.height=canvas.height*0.2;
+    this.text=text;
+   
+    this.draw=function(){
+      ctx.strokeRect(this.x, this.y, this.width, this.height);
+      ctx.font="20px";
+      ctx.fillStyle="black";
+      ctx.fillText(this.text, 0, 0);
     }
-    window.requestAnimationFrame(Newdraw3);
-  }
-  init();
+    this.draw();
+}
+
+function result(text){
+    this.x=canvas.width*0.1;
+    this.y=canvas.height*0.8;
+    width=canvas.width*0.5;
+    height=canvas.height*0.2;
+    ctx.strokeRect(x, y, width, height);
+    ctx.font="20px";
+    ctx.fillStyle="black";
+    ctx.fillText(text, 0, 0);
+}
+
+canvas.addEventListener('click', function(evt){
+    var mousePos = getMousePos(canvas, evt);
+        if (isInsideButton(mousePos, button1)){
+            console.log("hi");
+            if (button1.choice == "false"){
+              result("教室還沒開門，走廊的燈也壞掉了，被隱身的tobe嚇了一跳")
+          }
+        }
+});
+
+
+var button1 = {
+    x: canvas.width*0.7,
+    y: 180,
+    width: canvas.width*0.3,
+    height: 50,
+    color: '#EFE7DC',
+    choice: "false",
+    text: "提前二十分鐘到",
+};
+
+question("今天要什麼時候到教室，你決定");
+drawButton(button1, button1.color, button1.text);
