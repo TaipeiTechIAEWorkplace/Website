@@ -7,17 +7,21 @@
     </head>
 
     <body>
-        
         <!-- this代表被按下去的東西，所以按F12看console會出現btn -->
-        <div id="container">
-        <div id="text"></div>
-        <div id="button">
-        <button id="btn" class="button">A</button>
-        <button id="btn2" class="button">B</button>
-        <br/>
-        <button id="btn3" class="button">C</button>
-        <button id="btn4" class="button">D</button>
-        </div>
+        <div class="container">
+            <div id="question-container" class="hide">
+                <div id="question">Questions</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">Answer1</button>
+                    <button class="btn">Answer2</button>
+                    <button class="btn">Answer3</button>
+                    <button class="btn">Answer4</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Start</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+            </div>
         </div>
 
         
