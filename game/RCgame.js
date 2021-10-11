@@ -1,4 +1,4 @@
-var canvas = document.getElementById('canvas');
+var canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var ctx = canvas.getContext('2d');
@@ -6,13 +6,6 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 function isInsideButton(pos,rect){
     return pos.x >rect.x && pos.x < rect.x + rect.width && pos.y < rect.y + rect.height && pos.y > rect.y
-}
-
-function drawButton(name, color, text, textY){
-    ctx.fillStyle = color;
-    ctx.fillRect(name.x, name.y, name.width, name.height);
-    ctx.fillStyle = "black";
-    ctx.fillText(text, 860, textY);
 }
 
 function getMousePos(canvas, event){
@@ -23,89 +16,72 @@ function getMousePos(canvas, event){
     };
 }
 
-function question(x, y, width, height){
-	this.x = 0;
-	this.y = 477;
-	this.width = 700;
-	this.height = 100;
-
-	this.draw = function(){
-		ctx.strokeRect(this.x, this.y, this.width, this.height);
-        ctx.font = '24px serif';
-        ctx.fillStyle = "black";
-        ctx.fillText('當你發現早八物理課要遲到了...', 10, 535);
-	}
-	this.draw();
+function drawButton(text){
+    ctx.fillStyle = '#EFE7DC';
+    ctx.fillRect(850, 10+141*i, 400, 131);
+    ctx.fillStyle = "black";
+    ctx.fillText(text, 860, 75.5+131*i);
 }
 
+function question(text){
+    ctx.strokeRect(0, 477, 700, 100);
+    ctx.font = '24px serif';
+    ctx.fillStyle = "black";
+    ctx.fillText(text, 10, 535);
+}
+
+var questions = ["發現老師上課都在講幹話該怎麼辦",
+                 "期中考是否要背名詞解釋還是化學原理",
+                 "期末考是否要背老師勾的習題"];
+var choices = [["睡覺", "看書", "聽他說話", "滑手機"],
+               ["名詞解釋", "化學原理", "我不知道啦當場再掰"],
+               ["是", "否"]];
+var results = [["你被老師點名了，因為你說夢話", "恭喜你成功的在吸收考試內容", "老師講的內容大部份跟考試無關，班代吃了100顆花生米但還是沒聽懂", "你成功的享受了化學課上課時光 (20%機率太明顯被抓到"],
+               ["成功命中出題範圍，考了100分", "老師考了名詞解釋，但把背的原理拼湊上去後只有50分", "老師覺得你掰得不錯，拿到70分"],
+               ["瘋掉，結果老師完全沒有考習題內容，老師發考卷時臨時改變範圍", "背名詞解釋爽爽過"]];
+var trans = ["Next", "Try Again", "Exit to Menu"];
+
+var k = 0;
+
+question(questions[k]);
+
+for(var i = 0; i < choices[k].length; i++){
+    drawButton(choices[k][i]);
+}
+
+var i = 0;
 
 canvas.addEventListener('click', function(evt){
     var mousePos = getMousePos(canvas, evt);
-        if (isInsideButton(mousePos, button1)){
-            console.log("hi");
+    for(var ans = 0 ; ans < choices[k].length; ans++){
+        var buttonPlace = {
+            x: 850,
+            y: 10+141*ans,
+            width: 400,
+            height: 131
+        };
+        if (isInsideButton(mousePos, buttonPlace)){
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            if(ans == 0){
+                question(results[k][ans]);
+                for(i = 0; i < trans.length - 1; i++){
+                    drawButton(trans[i+1]);
+                }
+            }
+            else if(ans == 1){
+                question(results[k][ans]);
+                drawButton(trans[i]);
+            }
+            else if(ans == 2){
+                question(results[k][ans]);
+                for(i = 0; i < trans.length - 1; i++){
+                    drawButton(trans[i+1]);
+                }
+            }
+            else if(ans == 3){
+                question(results[k][ans]);
+                drawButton(trans[i]);
+            }
         }
+    }
 });
-
-canvas.addEventListener('click', function(evt){
-    var mousePos = getMousePos(canvas, evt);
-        if (isInsideButton(mousePos, button2)){
-            console.log("hi");
-        }
-});
-
-canvas.addEventListener('click', function(evt){
-    var mousePos = getMousePos(canvas, evt);
-        if (isInsideButton(mousePos, button3)){
-            console.log("hi");
-        }
-});
-
-canvas.addEventListener('click', function(evt){
-    var mousePos = getMousePos(canvas, evt);
-        if (isInsideButton(mousePos, button4)){
-            console.log("hi");
-        }
-});
-
-
-var button1 = {
-    x: 850,
-    y: 10,
-    width: 400,
-    height: 131,
-    color: '#EFE7DC',
-    text: "繼續睡",
-    textY: 75.5
-};
-
-var button2 = {
-    x: 850,
-    y: 151,
-    width: 400,
-    height: 131,
-    color: '#EFE7DC',
-    text: "趕去上課",
-    textY: 206.5
-};
-
-var button3 = {
-    x: 850,
-    y: 292,
-    width: 400,
-    height: 131,
-    color: '#EFE7DC'
-};
-
-var button4 = {
-    x: 850,
-    y: 433,
-    width: 400,
-    height: 131,
-    color: '#EFE7DC'
-};
-
-question();
-drawButton(button1, button1.color, button1.text, button1.textY);
-drawButton(button2, button2.color, button2.text, button2.textY);
-drawButton(button3, button3.color);
-drawButton(button4, button4.color);
