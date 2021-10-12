@@ -75,6 +75,8 @@ canvas.addEventListener('click', function(evt){
     if ((isInsideButton(mousePos, btn3))){
         if((btn3.correct)){
             console.log("click_btn3");
+            ctx.clearRect(0,0,5000,5000);
+            drawButton(next_ques, next_ques.color, next_ques.text, next_ques.text_xpos, next_ques.text_ypos);
         }else{
             ctx.clearRect(0,0,5000,5000);
             drawButton(try_again, try_again.color, try_again.text, try_again.text_xpos, try_again.text_ypos);
@@ -139,6 +141,17 @@ var btn3 = {
     text:"電子學",
     correct:true
 };
+
+var next_ques = {
+    x: canvas.width*0.4,
+    y: canvas.height*0.4,
+    text_xpos:canvas.width*0.5,
+    text_ypos: canvas.height*0.5,
+    width: 275,
+    height: 140,
+    color: "#808080",
+    text:"下一題"
+}
 
 
 drawBtnSet();
