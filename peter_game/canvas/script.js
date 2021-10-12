@@ -48,31 +48,37 @@ function getMousePos(canvas, event){
 
 canvas.addEventListener('click', function(evt){
     var mousePos = getMousePos(canvas, evt);
-    if ((isInsideButton(mousePos, btn1))&&(btn1.correct)){
-        console.log("click_btn");
-    }else{
-        ctx.clearRect(0,0,5000,5000);
-        drawButton(try_again, try_again.color, try_again.text, try_again.text_xpos, try_again.text_ypos);
+    if ((isInsideButton(mousePos, btn1))){
+        if((btn1.correct)){
+            console.log("click_btn");
+        }else{
+            ctx.clearRect(0,0,5000,5000);
+            drawButton(try_again, try_again.color, try_again.text, try_again.text_xpos, try_again.text_ypos);
+        }
     }
 });
 
 canvas.addEventListener('click', function(evt){
     var mousePos = getMousePos(canvas, evt);
-    if ((isInsideButton(mousePos, btn2))&&(btn2.correct)){
-        console.log("click_btn2");
-    }else{
-        ctx.clearRect(0,0,5000,5000);
-        drawButton(try_again, try_again.color, try_again.text, try_again.text_xpos, try_again.text_ypos);
+    if ((isInsideButton(mousePos, btn2))){
+        if((btn2.correct)){
+            console.log("click_btn2");
+        }else{
+            ctx.clearRect(0,0,5000,5000);
+            drawButton(try_again, try_again.color, try_again.text, try_again.text_xpos, try_again.text_ypos);
+        }
     }
 });
 
 canvas.addEventListener('click', function(evt){
     var mousePos = getMousePos(canvas, evt);
-    if ((isInsideButton(mousePos, btn3))&&(btn3.correct)){
-        console.log("click_btn3");
-    }else{
-        ctx.clearRect(0,0,5000,5000);
-        drawButton(try_again, try_again.color, try_again.text, try_again.text_xpos, try_again.text_ypos);
+    if ((isInsideButton(mousePos, btn3))){
+        if((btn3.correct)){
+            console.log("click_btn3");
+        }else{
+            ctx.clearRect(0,0,5000,5000);
+            drawButton(try_again, try_again.color, try_again.text, try_again.text_xpos, try_again.text_ypos);
+        }
     }
 });
 
