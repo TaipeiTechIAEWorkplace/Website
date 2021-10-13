@@ -89,7 +89,7 @@ canvas.addEventListener('click', function(evt){
     var mousePos = getMousePos(canvas, evt);
         if (isInsideButton(mousePos, next)){
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            document.write('<script src="game/oreoTry2.js"></script>')
+            document.getElementById('scriptid').src = "oreoTry2.js";
         }
   });
 
