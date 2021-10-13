@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        {% block title %}<title>名稱</title>{% endblock %}
+        <title>名稱</title>
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/memes.css' %}">
     </head>
@@ -30,7 +30,7 @@
             </p>
         </div>
 
-        <a class="upload_button" href="{% url 'upload' %}">我要上傳→→</a>
+        <button class="upload_button">我要上傳→→</button>
 
     </body>
 </html>
