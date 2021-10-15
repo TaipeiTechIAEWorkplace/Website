@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='memes'),
-#    path('upload', views.upload, name='upload'),
-#    path('picture', views.picture, name='picture'),
+    path('upload', views.upload, name='upload'),
+    path('picture', views.bpicture, name='picture'),
 ]
