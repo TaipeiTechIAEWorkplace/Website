@@ -95,7 +95,7 @@ body{
     background-color: #F5F5F5;
     color: #000000;
 }
-.move_dropdown a:active{
+.menu_dropdown a:active{
     animation-name: click_button_2;
     animation-duration: 1s;
 }
@@ -172,6 +172,44 @@ body{
 
 .search input:focus, .search input:not(:placeholder-shown) {
     width: 250px;
+}
+
+/* hashtag */
+.hashtag{
+    position: fixed;
+    top: 195px;
+    left: 90px;
+    width: 75%;
+    z-index: 888;
+    
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.hashtag a{
+    display: inline-block;
+    padding: 2px 10px 2px 10px;
+    margin: 3px 1px 3px 1px;
+
+    color: #3366BB;
+    border: #666666 1px solid;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hashtag a:active{
+    border: #7194FF 1px solid;
+    background-color: #7194FF;
+    color: #ffffff;
+}
+.hashtag a:focus{
+    border: #7194FF 1px solid;
+    background-color: #7194FF;
+    color: #ffffff;
 }
 
 /* 介紹 */
