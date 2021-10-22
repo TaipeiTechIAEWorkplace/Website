@@ -46,6 +46,7 @@ body{
 .menu_left a:hover {
     background-color: #ebebeb;
     color: #000000;
+    transition-duration: 0.1s;
 }
 .menu_left a:active{
     animation-name: click_button_1;
@@ -80,7 +81,7 @@ body{
 .menu_dropdown a{
     display: none;
     width: 120px;
-    height: 30px;
+    height: 25px;
 
     font: small-caps, Arial, Helvetica bold 17px sans-serif;
     color: #ffffff;
@@ -90,17 +91,18 @@ body{
     text-align: center;
     vertical-align: middle;
 }
-.menu_dropdown a:hover{
+.menu_dropdown a:hover {
     display: inline-block;
     background-color: #F5F5F5;
     color: #000000;
+    transition-duration: 0.1s;
 }
 .menu_dropdown a:active{
     animation-name: click_button_2;
     animation-duration: 1s;
 }
 
-.menu div{
+#profile_pic{
     position: fixed;
     top: 0px;
     right: 30px;
@@ -110,7 +112,10 @@ body{
     cursor: pointer;
 
 }
-.menu div:hover + ul>li>a{
+#profile_pic:hover + ul>li>a{
+    display: inline-block;
+}
+.menu_dropdown:hover >li>a:not(:hover){
     display: inline-block;
 }
 
@@ -179,11 +184,12 @@ body{
     position: fixed;
     top: 195px;
     left: 90px;
-    width: 75%;
+    width: 72%;
     z-index: 888;
     
     overflow-x: auto;
     white-space: nowrap;
+    overflow: -moz-scrollbars-none;
     scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
