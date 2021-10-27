@@ -1,9 +1,9 @@
 .title{
-    font-size: 70px;
+    font-size: 85px;
 }
 
 img{
-    height: 120px;
+    height: 220px;
     width: auto;
     margin: 15px;
 }
@@ -11,7 +11,7 @@ img{
 .box{
     margin: 20px 50px 0px 50px;
     width: 1150px;
-    height: 150px;
+    height: 250px;
     background-color: aquamarine;
 }
 
@@ -20,13 +20,13 @@ img{
 }
 
 #topic{
-    font-size: 30px;
+    font-size: 55px;
     position: absolute;
     top: 15px;
 }
 
 #info{
-    font-size: 20px;
+    font-size: 30px;
     position: absolute;
-    top: 70px;
+    top: 130px;
 }
