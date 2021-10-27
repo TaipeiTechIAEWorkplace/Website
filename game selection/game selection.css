@@ -1,8 +1,9 @@
 .title{
+    padding: 50px 20px 10px 50px;
     font-size: 85px;
 }
 
-img{
+#meme{
     height: 220px;
     width: auto;
     margin: 15px;
