@@ -6,13 +6,32 @@
         <link rel="stylesheet" href="login.css">
     </head>
     <body>
+
+        <!--menu-->
+        <div class="menu">
+            <p class="menu_left">
+                <a href="#">HOME</a>
+                <a href="#">GAME</a>
+                <a href="#">PAGE</a>
+            </p>
+            <p class="menu_right">
+                <a id="name">Name123456789</a>
+            </p>
+            <div id="profile_pic"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"></div>
+            <ul class="menu_dropdown">
+                <li><a href="#">個人資料</a></li>
+                <li><a href="#">blablabla</a></li>
+                <li><a href="#">登出</a></li>
+            </ul>
+        </div>
+
         <!--登錄-->
         <div class="LogIn_box">    
             <div class="LogIn">
 
                 <!--登入or註冊-->
-                <input id="tab-1" type="radio" name="tab" class="SignIn" checked><label for="tab-1" class="tab">Sign In</label>
-                <input id="tab-2" type="radio" name="tab" class="SignUp"><label for="tab-2" class="tab">Sign Up</label>
+                <input id="tab-1" type="radio" name="tab" class="SignIn" checked><label for="tab-1" class="tab">登入</label>
+                <input id="tab-2" type="radio" name="tab" class="SignUp"><label for="tab-2" class="tab">註冊</label>
 
                 <div class="LogIn_form">
                     <!--登入-->
@@ -27,15 +46,19 @@
                         </div>
                         <div class="group">
                             <input id="check" type="checkbox" class="check">
-                            <label for="check"><span class="icon"></span>保持登入</label>
+                            <label for="check"><span class="icon"></span> 保持登入</label>
                         </div>
                         <div class="group">
                             <input type="submit" class="button" value="登入">
                         </div>
+                        <div class="hr"></div>
+				        <div class="below">
+					        <a href="#">忘記密碼？</a>
+				        </div>
                     </div>
 
                     <!--註冊-->
-                    <div class="SighUp_form">
+                    <div class="SignUp_form">
                         <div class="group">
                             <label for="username" class="label">用戶名稱</label>
                             <input id="username" type="text" class="input">
@@ -55,6 +78,10 @@
                         <div class="group">
                             <input type="submit" class="button" value="註冊帳號">
                         </div>
+                        <div class="hr"></div>
+				        <div class="below">
+					        <a for="tab-1">想起帳號了嗎？</a>
+				        </div>
                     </div>
 
                 </div>
