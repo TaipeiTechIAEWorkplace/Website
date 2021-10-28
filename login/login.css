@@ -141,11 +141,13 @@ a{
 	100% {opacity: 1;}
 }
 .LogIn_box{
+	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: -275px;
 	width: 100%;
-	margin: 0px auto;
 	max-width: 500px;
 	min-height: 550px;
-	position: relative;
 	box-shadow: 0 12px 15px 0 rgba(0,0,0,0.5), 0 20px 25px 0 rgba(0,0,0,0.3);
 	user-select: none;
 
@@ -215,7 +217,7 @@ a{
 
 .LogIn_form .group .button{
 	width: 100%;
-	margin-top: 35px;
+	margin-top: 45px;
 	color: #ffffff;
 	background-color: #4B4E63;
 	cursor: pointer;
@@ -302,7 +304,7 @@ a{
 
 .hr{
 	height: 2px;
-	margin: 60px 0 30px 0;
+	margin: 45px 0 30px 0;
 	background-color: rgba(70,70,70,0.5);
 }
 
