@@ -9,22 +9,49 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=candara">
 </head>
 <body>
+    <!-- Navbar -->
+    <div class="menu">
+        <p class="menu_left">
+            <a href="#">HOME</a>
+            <a href="#">GAME</a>
+            <a href="#">PAGE</a>
+        </p>
+        <p class="menu_right">
+            <a id="id">Name123456789</a>
+        </p>
+        <div id="profile_pic"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"></div>
+        <ul class="menu_dropdown">
+            <li><a href="#">個人資料</a></li>
+            <li><a href="#">blablabla</a></li>
+            <li><a href="#">登出</a></li>
+        </ul>
+    </div>
+    <!-- Navbar -->
+
+    <video id="background-video" autoplay loop muted poster="vid.jpg">
+        <source src="vid.mp4" type="video/mp4">
+    </video>
     
-    <div class="log">
+    <script>
+        var v = document.getElementById("background-video");
+        v.playbackRate = 0.69;
+    </script>
+
+    <!-- <div class="log">
         <a href="/" class="login">Login</a>
         <a href="/" class="signup">Sign Up</a>
-    </div>
+    </div> -->
 
     <div class="title-box">
         <span class="iae">IAE2</span>
         <span class="name">職場實務 :)</span>
     </div>
 
-    <div class="slider">
+    <!-- <div class="slider">
         <div class="load"></div>
-    </div>
+    </div>  -->
 
-    <button class="picture">梗圖</button>
+    <!-- <button class="picture">梗圖</button>
     <button class="game">遊戲</button>
 
     <div class="line"></div>

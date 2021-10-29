@@ -5,63 +5,51 @@
         <link href="style.css" rel="stylesheet" media="all">
         <title>個人信息</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+        <link href="navbar.css" rel="stylesheet" media="all">
     </head>
 
     <body>
-        <div>
-            <div>
-            <a href="home.html"><img id="logo" src="logo.png" width="130" alt="主頁"></a>
-            <a href="home.html"><img id="home_icon" src="home.jpg" width="50" alt="主頁"></a>
-            <img src="self.png" width="36" style="position:relative; top:-5px; left:1240px;">
-            <hr/>
-            </div>
+        <!-- Navbar -->
+        <div class="menu">
+            <p class="menu_left">
+                <a href="#">HOME</a>
+                <a href="#">GAME</a>
+                <a href="#">PAGE</a>
+            </p>
+            <p class="menu_right">
+                <a id="name">Name123456789</a>
+            </p>
+            <div id="profile_pic"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"></div>
+            <ul class="menu_dropdown">
+                <li><a href="#">個人資料</a></li>
+                <li><a href="#">blablabla</a></li>
+                <li><a href="#">登出</a></li>
+            </ul>
+        </div>
+        <!-- Navbar -->
 
         <div class="container">
             <div >
                 <img id="person_photo" src="download.png" alt="個人照片">
             </div>
             <div id="bio">
-                <p style="font-size: 300%;">威爾森</p>
-                <p style="margin-top:-45px; margin-left:20px;">t1082b00xx@gmail.com</p>
-                <p style="margin-top:45px; font-size: 200%;">簡介</p>
-                <p style="margin-left: 20px; margin-top:-20px;">Hello, I am Wilson. I love playing tennis and programming. Iafqafqgfvewgvwgeragaergtergeargersg</p>
+                <p id="id">威爾森</p>
+                <p id="gmail">t1082b00xx@gmail.com</p>
+                <p id="words">簡介</p>
+                <p id="more_words">Hello, I am Wilson. I love playing tennis and programming. Iafqafqgfvewgvwgeragaergtergeargersg</p>
             </div>
             <div class="container2">
                 <div>
-                <p style="font-size: 190%; text-align:center;">上傳梗圖</p>
-                <p style="font-size: 165%; text-align:center;">85</p>
+                    <p id="memeupload">上傳梗圖</p>
+                    <p id="memenum">85</p>
                 </div>
                 <div id="love">
-                    <img src="love.png" style="text-align:center; width:55px;">
-                    <p style="font-size: 165%; text-align:center;">0</p>
+                    <p id="heart">♡</p>
+                    <p id="likenum">0</p>
                 </div>
             </div>
-            <div><a href="change.html"><p id="change"><b>變更個人資料</b></p></a></div>
+            <div><a href="change.html" id="change">變更個人資料</a></div>
             <div class="meme" style="border-top:1px solid black; margin:60px auto; padding:5px; overflow:auto; width:1000px; height:300px;">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
             </div>
         </div>
 

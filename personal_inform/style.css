@@ -14,16 +14,37 @@
 /* 個人信息 */
 .container{
     padding:50px;
-    margin:85px;
     display: flex;
     flex-wrap: wrap; 
     flex-direction: row;
-    border:1px solid black;
+}
+
+#person_photo{
+    height: 175px;
+    width: 175px;
+    padding: 50px 30px 30px 70px;
 }
 
 #bio{
-    padding-left:100px;
+    padding-left:25px;
     width:500px;
+}
+
+#id{
+    font-size: 40px;
+}
+
+#gmail{
+    margin-top:-45px;
+}
+
+#words{
+    margin-top:45px; 
+    font-size: 25px;
+}
+
+#more_words{
+    margin-top:-20px;
 }
 
 .container2{
@@ -32,16 +53,36 @@
     flex-direction: row;
 }
 
+#memeupload{
+    font-size: 25px; 
+    text-align:center;
+}
+
+#memenum{
+    font-size:25px; 
+    text-align:center;
+}
+
 #love{
     position: relative;
-    top:18px;
-    left:90px;
+    top:10px;
+    left:60px;
+}
+
+#heart{
+    text-align:center; 
+    font:50px;
+}
+
+#likenum{
+    font-size: 25px; 
+    text-align:center;
 }
 
 #change{
     border: 2px solid black; 
     position: relative; 
-    top:285px; 
+    top:200px; 
     right:120px; 
     font-size: 150%;
 }
