@@ -119,6 +119,21 @@ body{
   display: inline-block;
 }
 
+/* 回到上一頁 */
+.back{
+  position: absolute;
+  top: 70px;
+  left: 23px;
+}
+.back a{
+  color: #000000;
+  font: 600 18px 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+.back a::before{
+  content: '<  ';
+}
+
 /* upload */
 
 .upload{
