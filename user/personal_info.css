@@ -53,7 +53,13 @@
     flex-direction: row;
 }
 
+#meme{
+    position: relative;
+    top:30px;
+}
+
 #memeupload{
+    top:50px;
     font-size: 25px; 
     text-align:center;
 }
@@ -65,13 +71,15 @@
 
 #love{
     position: relative;
-    top:10px;
+    top:45px;
     left:60px;
 }
 
 #heart{
     text-align:center; 
-    font:50px;
+    font-size:35px;
+    padding:0px;
+    margin: 0px;
 }
 
 #likenum{
@@ -80,11 +88,14 @@
 }
 
 #change{
-    border: 2px solid black; 
     position: relative; 
     top:200px; 
-    right:120px; 
+    right:100px; 
     font-size: 150%;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .meme{
