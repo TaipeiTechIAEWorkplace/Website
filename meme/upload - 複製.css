@@ -1,5 +1,17 @@
 body{
     background-color: #ffffff;
+    /* font: 600 16px/18px 'Open Sans',sans-serif; */
+}
+
+/* scrollbar */
+main{
+  position: absolute;
+  top: 50px;
+  width: 99vw;
+  margin: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 /* menu */

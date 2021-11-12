@@ -1,5 +1,22 @@
 @charset "utf-8";
 
+body{
+    background-color: #ffffff;
+    /* font: 600 16px/18px 'Open Sans',sans-serif; */
+}
+
+/* scrollbar */
+main{
+    position: absolute;
+    top: 50px;
+    max-width: 1000;
+    margin: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
 /* logo設計 */
 #logo{
     margin-left:30px;
@@ -13,7 +30,7 @@
 
 /* 個人信息 */
 .container{
-    padding:50px;
+    padding: 50px;
     display: flex;
     flex-wrap: wrap; 
     flex-direction: row;
@@ -26,7 +43,7 @@
 }
 
 #bio{
-    padding-left:25px;
+    padding-left: 25px;
     width:500px;
 }
 
@@ -104,11 +121,16 @@
     flex-direction: row; /* 亦有row,row-reverse */
     border:2px solid black;
     justify-content: space-around; /* 亦有center,flex-end.flex-start(default),space-between,space-evenly */
+    margin: auto; 
+    padding: 5px; 
+    overflow: auto; 
+    width: 1000px;
+    height: 300px;
 }
 
 .meme div{
-    border:1px solid rgb(102, 32, 75);
-    margin:20px;
-    width:100px;
-    height:100px;
+    border: 1px solid rgb(102, 32, 75);
+    margin: 20px;
+    width: 100px;
+    height: 100px;
 }
