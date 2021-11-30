@@ -105,6 +105,57 @@ h1{
     top:10px
 } 
 
+.badge{
+    max-width:100%;
+    max-height:100%;
+    border-radius: 20px;
+}
+
+#container{
+    max-width: 300px;
+    margin: 0 70px;
+}
+
+.card{
+    background-color: azure;
+    padding: 16px;
+    border-radius: 12px;
+    border:1px solid black;
+}
+
+.name{
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+section p{
+    font-size: 20px;
+    color: #7F8c9B;
+    line-height: 200%;
+}
+
+section button{
+    border:none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #07f;
+    background-color: #E0EFFF;
+    margin: 0 auto;
+    display: block;
+    transition: all 600ms ease-in-out;
+    cursor: pointer;
+}
+
+.card_detail{
+    padding: 16px 8px 8px 8px;
+}
+
+button:focus, button:hover{
+    background-color: #07f;
+    color: #E0EFFF;
+}
 /* .btn:hover{
     background-color:rgba(255,255,255,0.4);
     color:black;
