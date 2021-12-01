@@ -2,6 +2,138 @@
     margin: 0;
     padding: 0;
   }
+
+  @keyframes click_button_1{
+    from {background-color: #dddddd;}
+    to {background-color: #ebebeb;}
+}
+@keyframes click_button_2{
+    from {background-color: #dddddd;}
+    to {background-color: #F5F5F5;}
+}
+
+.menu{
+    position: fixed;
+    width: 100%;
+    height: 25px;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+
+    background-color: rgba(0,0,0,0);
+}
+
+.menu a{
+    display: inline;
+    padding: 17px 20px;
+    height: 25px;
+    text-decoration: none;
+}
+
+.menu_left{
+    position: fixed;
+    float: left;
+    left: 25px;
+    cursor: pointer;
+    
+    text-align: center;
+}
+.menu_left a{
+    font: small-caps bold 17px sans-serif;
+    color: #ffffff;
+}
+.menu_left a:hover {
+    background-color: #ebebeb;
+    color: #000000;
+    transition-duration: 0.1s;
+}
+.menu_left a:active{
+    animation-name: click_button_1;
+    animation-duration: 1s;
+}
+
+.menu_right{
+    position: fixed;
+    float: right;
+    top: 3px;
+    right: 120px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+}
+#id{
+    color: white;
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.95;
+}
+
+.menu img{
+    position: fixed;
+    top: 13px;
+    right: 40px;
+    width: 27px;
+    cursor: pointer;
+}
+
+.menu_dropdown{
+    position: fixed;
+    top: 36px;
+    right: 5px;
+
+    list-style-type: none;
+}
+.menu_dropdown a{
+    display: none;
+    width: 120px;
+    height: 25px;
+
+    font: small-caps, Arial, Helvetica bold 17px sans-serif;
+    color: #ffffff;
+    background-color: #3B3E4F;
+
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+}
+.menu_dropdown a:hover {
+    display: inline-block;
+    background-color: #F5F5F5;
+    color: #000000;
+    transition-duration: 0.1s;
+}
+.menu_dropdown a:active{
+    animation-name: click_button_2;
+    animation-duration: 1s;
+}
+
+#profile_pic{
+    position: fixed;
+    top: 0px;
+    right: 30px;
+    width: 47px;
+    height: 54px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+
+}
+#profile_pic:hover + ul>li>a{
+    display: inline-block;
+}
+.menu_dropdown:hover >li>a:not(:hover){
+    display: inline-block;
+}
   
   a{
       color: black;
@@ -11,9 +143,8 @@
       padding: 5px;
       width: 60px;
   }
-
-
- .title-box{
+  
+  .title-box{
     width: 300px;
     height: auto;
     position: fixed;
@@ -54,100 +185,4 @@
       left: 11px;
       top: -4px;
       opacity: 0.7;
-  }
-
-  .load{
-      animation: slide 2s;
-  }
-
-  .slider{
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      height: 100vh;
-      animation: slide 30s infinite;
-  }
-
-  @keyframes slide {
-      0%{
-          background-image: url('https://img.ltn.com.tw/Upload/news/600/2019/12/30/phpZjAnmW.jpg');
-          opacity: 0.5;
-      }
-      20%{
-          background-image: url('https://img.ltn.com.tw/Upload/news/600/2019/12/30/phpZjAnmW.jpg');
-          opacity: 0.5;
-      }
-      20.01%{
-        background-image: url('https://fakeimg.pl/400x400/?text=Hello');
-        opacity: 0.5;
-    }
-    40%{
-        background-image: url('https://fakeimg.pl/400x400/?text=Hello');
-        opacity: 0.5;
-    }
-    40.01%{
-        background-image: url('https://fakeimg.pl/200x100/?retina=1&text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF&font=noto');
-        opacity: 0.5;
-    }
-    60%{
-        background-image: url('https://fakeimg.pl/200x100/?retina=1&text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF&font=noto');
-        opacity: 0.5;
-    }
-    60.01%{
-        background-image: url('https://fakeimg.pl/350x200/?text=World&font=lobster');
-        opacity: 0.5;
-    }
-    80%{
-        background-image: url('https://fakeimg.pl/350x200/?text=World&font=lobster');
-        opacity: 0.5;
-    }
-    80.01%{
-        background-image: url('https://fakeimg.pl/350x200/ff0000%2C128/000%2C255/');
-        opacity: 0.5;
-    }
-    100%{
-        background-image: url('https://fakeimg.pl/350x200/ff0000%2C128/000%2C255/');
-        opacity: 0.5;
-    }
-  }
-
-  .picture{
-    background-color: transparent;
-    border: none;
-    color: #000;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 50px;
-    cursor: pointer;
-    position: fixed;
-    bottom: 250px;
-    left: 25%;
-    z-index: 2;
-  }
-
-  .game{
-    background-color: transparent;
-    border: none;
-    color: #000;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 50px;
-    cursor: pointer;
-    position: fixed;
-    bottom: 250px;
-    left: 60%;
-    z-index: 2;
-  }
-
-  .line{
-      border-left: 3px solid black;
-      height: 400px;
-      position: fixed;
-      left: 50%;
-      bottom: 100px;
   }

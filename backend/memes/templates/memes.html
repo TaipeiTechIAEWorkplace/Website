@@ -2,28 +2,49 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>名稱</title>
+        {% block title %}<title>Memes</title>{% endblock %}
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/memes.css' %}">
+        <link rel="stylesheet" href="{% static 'css/梗圖.css' %}">
     </head>
+    <style>
+        .picture{
+            background-color: #FF0;
+            display: block;
+        }
+        .list{
+            display: inline;
+            border-color:black;
+            width: 320px;
+        }
+        .picture{
+            padding: 10px;
+            max-width: 300px;
+        }
+        .memetitle{
+            text-decoration: none;
+        }
+    </style>
     <body>
-
         <div class="menu">
             <p class="menu_left">
-                <a href="https://zcswprj.herokuapp.com">HOME</a>
+                <a href="{% url 'main' %}">HOME</a>
+                <a href="{% url 'memes'%}">MEME</a>
                 <a href="{% url 'games' %}">GAME</a>
-                <a href="#">PAGE</a>
+            </p>
             </p>
             <p class="menu_right">
-                <a id="name">Name123456789</a>
+                {% if not user.is_authenticated %}
+                <a href="{% url 'login'%}?next={{request.path}}" id="name">Login</a>
+                {% else %}
+                <a id="name">{{ user.get_username }}</a>
             </p>
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-            <div></div>
+            <div id="profile_pic"><img src="{{request.user.personalinformation.profile_pic.url}}"></div>
             <ul class="menu_dropdown">
-                <li><a href="#">個人資料</a></li>
+                <li><a href="{% url 'userinfo' %}">個人資料</a></li>
                 <li><a href="#">blablabla</a></li>
-                <li><a href="#">登出</a></li>
+                <li><a href="{% url 'logout'%}?next={{request.path}}">登出</a></li>
             </ul>
+            {% endif %}
         </div>
 
         <div class="title">
@@ -36,15 +57,35 @@
             </div>
         </div>
 
+        <div class="hashtag">
+            <label>
+                <input type="checkbox">
+                <span>壹貳參肆伍</span>
+            </label>
+        </div>
+
         <div class="introduce">
             <p>
                 介紹Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti corporis asperiores tempore ex maiores obcaecati possimus commodi, iusto dignissimos.
+                <br><br>
+                made by ...
             </p>
         </div>
 
         <div class="upload_button">
             <button>我要上傳→→</button>
         </div>
+        <div class="picture">
+        {% for meme in memes %}
+            <div class="list">
+                <a href="#" class="memetitle">{{ meme.title }}</a>
+                <img src="{{ meme.image.url }}" class="image" style = "max-width:300px	">
+                {{ meme.upload_date }}
+                {{ meme.uploader }}
+                {{ meme.image_description }}
+            </div>
+        {% endfor %}
+    </div>
 
     </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        {% load static %}
+        <link href="{% static 'css/personal_info.css' %}" rel="stylesheet" media="all">
+        <title>個人信息</title>
+        {% load static %}
+        <link href="{% static 'css/navbar.css' %}" rel="stylesheet" media="all">
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="menu">
+            <p class="menu_left">
+                <a href="{% url 'main' %}">HOME</a>
+                <a href="{% url 'memes' %}">MEME</a>
+                <a href="{% url 'games' %}">GAME</a>
+            </p>
+            <p class="menu_right">
+                {% if not user.is_authenticated %}
+                <a href="{% url 'login'%}?next={{request.path}}" id="name">Login</a>
+                {% else %}
+                <a id="name">{{ user.get_username }}</a>
+            </p>
+            <div id="profile_pic"><img src="{{request.user.personalinformation.profile_pic.url}}"></div>
+            <ul class="menu_dropdown">
+                <li><a href="{% url 'userinfo' %}">個人資料</a></li>
+                <li><a href="#">blablabla</a></li>
+                <li><a href="{% url 'logout'%}?next={{request.path}}">登出</a></li>
+            </ul>
+            {% endif %}
+        </nav>
+        <!-- Navbar -->
+
+        <main class="container">
+            <div >
+                <img id="person_photo" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="個人照片">
+            </div>
+            <div id="bio">
+                <p id="id">{{request.user.personalinfo.name}}</p>
+                <p id="gmail">{{request.user.personalinfo.email}}</p>
+                <p id="words">{{request.user.personalinfo.intro}}</p>
+                <p id="more_words">Hello, I am Wilson. I love playing tennis and programming. Iafqafqgfvewgvwgeragaergtergeargersg</p>
+            </div>
+            <div class="container2">
+                <div id=meme>
+                    <p id="memeupload">上傳梗圖</p>
+                    <p id="memenum">85</p>
+                </div>
+                <div id="love">
+                    <p id="heart">♡</p>
+                    <p id="likenum">0</p>
+                </div>
+            </div>
+            <div><a href="change.html" id="change">變更個人資料</a></div>
+            <div class="meme"></div>
+        </main>
+    </body>
+</html>

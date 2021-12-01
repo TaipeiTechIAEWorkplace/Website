@@ -1,0 +1,33 @@
+.title{
+    padding: 50px 20px 10px 50px;
+    font-size: 85px;
+}
+
+#meme{
+    height: 220px;
+    width: auto;
+    margin: 15px;
+}
+
+.box{
+    margin: 20px 50px 0px 50px;
+    width: 1150px;
+    height: 250px;
+    background-color: aquamarine;
+}
+
+#box{
+    position: relative;
+}
+
+#topic{
+    font-size: 55px;
+    position: absolute;
+    top: 15px;
+}
+
+#info{
+    font-size: 30px;
+    position: absolute;
+    top: 130px;
+}
