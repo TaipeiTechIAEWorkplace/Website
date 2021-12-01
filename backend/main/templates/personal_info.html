@@ -35,13 +35,13 @@
 
         <main class="container">
             <div >
-                <img id="person_photo" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="個人照片">
+                <img id="person_photo" src="{{request.user.personalinformation.profile_pic.url}}" alt="個人照片">
             </div>
             <div id="bio">
-                <p id="id">{{request.user.personalinfo.name}}</p>
-                <p id="gmail">{{request.user.personalinfo.email}}</p>
-                <p id="words">{{request.user.personalinfo.intro}}</p>
-                <p id="more_words">Hello, I am Wilson. I love playing tennis and programming. Iafqafqgfvewgvwgeragaergtergeargersg</p>
+                <p id="id">{{request.user.personalinformation.name}}</p>
+                <p id="gmail">{{request.user.personalinformation.email}}</p>
+                <p id="words">簡介</p>
+                <p id="more_words">{{request.user.personalinformation.intro}}</p>
             </div>
             <div class="container2">
                 <div id=meme>

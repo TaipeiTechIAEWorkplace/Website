@@ -8,8 +8,10 @@ def index(request):
     })
 
 def userinfo(request):
-    return render(request, 'personal_info.html',{
-    })
+    if request.user.is_authenticated:
+        return render(request, 'personal_info.html')
+    else:
+        return HttpResponseRedirect('/accounts/login/')
 
 def login(request):
     if request.user.is_authenticated:
