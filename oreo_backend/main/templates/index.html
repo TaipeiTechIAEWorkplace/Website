@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=candara">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="menu">
+        <p class="menu_left">
+            <a href="https://foodoreo2.herokuapp.com">HOME</a>
+            <a href="{% url 'games' %}">GAME</a>
+            <a href="{% url 'memes' %}">PAGE</a>
+        </p>
+        <p class="menu_right">
+            <a id="id">Name123456789</a>
+        </p>
+        <div id="profile_pic"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"></div>
+        <ul class="menu_dropdown">
+            <li><a href="#">個人資料</a></li>
+            <li><a href="#">blablabla</a></li>
+            <li><a href="#">登出</a></li>
+        </ul>
+    </div>
+    <!-- Navbar -->
+
+    <video id="background-video" autoplay loop muted poster="{% static 'css/vid.jpg' %}">
+        <source src="{% static 'css/vid.mp4' %}" type="video/mp4">
+    </video>
+    
+    <script>
+        var v = document.getElementById("background-video");
+        v.playbackRate = 0.69;
+    </script>
+
+    <!-- <div class="log">
+        <a href="/" class="login">Login</a>
+        <a href="/" class="signup">Sign Up</a>
+    </div> -->
+
+    <div class="title-box">
+        <span class="iae">IAE2</span>
+        <span class="name">職場實務 :)</span>
+    </div>
+
+    <!-- <div class="slider">
+        <div class="load"></div>
+    </div>  -->
+
+    <!-- <button class="picture">梗圖</button>
+    <button class="game">遊戲</button>
+
+    <div class="line"></div>
+
+</body>
+</html>

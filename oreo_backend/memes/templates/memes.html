@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>名稱</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/memes.css' %}">
+    </head>
+    <body>
+
+        <div class="menu">
+            <p class="menu_left">
+                <a href="https://foodoreo2.herokuapp.com">HOME</a>
+                <a href="{% url 'games' %}">GAME</a>
+                <a href="#">PAGE</a>
+            </p>
+            <p class="menu_right">
+                <a id="name">Name123456789</a>
+            </p>
+            <div id="profile_pic"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"></div>
+            <ul class="menu_dropdown">
+                <li><a href="#">個人資料</a></li>
+                <li><a href="#">blablabla</a></li>
+                <li><a href="#">登出</a></li>
+            </ul>
+        </div>
+
+        <div class="title">
+            <br>
+            <h1>梗圖...</h1>
+            <div class="search">
+                <div>
+                    <input type="text" placeholder="Search . . ." required>
+                </div>
+            </div>
+        </div>
+
+        <div class="hashtag">
+            <label>
+                <input type="checkbox">
+                <span>壹貳參肆伍</span>
+            </label>
+        </div>
+
+        {% block content %}
+        <div class="photo">
+            {% for photo in photos %}
+            <div>
+                <img src="{{ photo.image.url }}"/>
+            </div>
+            {% endfor %}
+        </div>
+        {% endblock %}
+
+        <div class="introduce">
+            <p>
+                介紹Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti corporis asperiores tempore ex maiores obcaecati possimus commodi, iusto dignissimos.
+                <br><br>
+                made by ...
+            </p>
+        </div>
+
+        <div class="upload_button">
+            <a href="{% url 'photoUpload' %}">我要上傳→→</a>
+        </div>
+        
+         <div class="picture">
+            <div><img src=""></div>
+        </div>
+
+    </body>
+</html>
