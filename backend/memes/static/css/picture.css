@@ -1,28 +1,31 @@
-*{
-    margin: 0;
-    padding: 0;
+.content{
+    display: flex;
+    justify-content: center;
 }
+.content_box{
+    max-width: 500px;
+    height: 450px;
+    position: relative;
+    top: 70px;
+}
+
 
 body{
     background-color: #fff;
+    /* font: 600 16px/18px 'Open Sans',sans-serif; */
 }
 
-.above{
-    text-align: right;
-    color: #555555;
-    height: 100px;
-}
 
 .name{
     width: 50%;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     text-align: center;
 }
 
 .picture{ /*垂直致中*/
     width: 50%;
     height: 80%;
-    margin: auto;
+    /* margin: auto; */
     text-align: center;   
     position: fixed;
     left: 0;
@@ -31,7 +34,7 @@ body{
 
 .text{
     width: 50%;
-    margin: auto;
+    /* margin: auto; */
     text-align: left;
     float: right;
 }

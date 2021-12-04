@@ -17,6 +17,14 @@ def upload(request):
     return render(request, 'upload.html',{
     })
 
+def picture(request, pk):
+    meme = Photo.objects.get(id = pk)
+    tags = meme.tags.all()
+    return render(request, 'picture.html',{
+        'meme' : meme,
+        'tags' : tags
+    })
+
 def delete_picture(request, pk):
     if request.method == 'POST':
         pic = Photo.objects.get(pk)

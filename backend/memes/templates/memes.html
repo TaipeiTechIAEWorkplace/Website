@@ -38,7 +38,7 @@
                 {% else %}
                 <a id="name">{{ user.get_username }}</a>
             </p>
-            <div id="profile_pic"><img src="{{request.user.personalinformation.profile_pic.url}}"></div>
+            <div id="profile_pic"><img src="{{request.user.member.profile_pic.url}}"></div>
             <ul class="menu_dropdown">
                 <li><a href="{% url 'userinfo' %}">個人資料</a></li>
                 <li><a href="#">blablabla</a></li>
@@ -66,7 +66,8 @@
 
         <div class="introduce">
             <p>
-                介紹Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti corporis asperiores tempore ex maiores obcaecati possimus commodi, iusto dignissimos.
+                介紹Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti 
+				corporis asperiores tempore ex maiores obcaecati possimus commodi, iusto dignissimos.
                 <br><br>
                 made by ...
             </p>
@@ -78,7 +79,7 @@
         <div class="picture">
         {% for meme in memes %}
             <div class="list">
-                <a href="#" class="memetitle">{{ meme.title }}</a>
+                <a href="{% url 'picture' meme.id %}" class="memetitle">{{ meme.title }}</a>
                 <img src="{{ meme.image.url }}" class="image" style = "max-width:300px	">
                 {{ meme.upload_date }}
                 {{ meme.uploader }}

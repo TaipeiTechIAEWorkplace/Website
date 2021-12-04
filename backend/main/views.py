@@ -6,7 +6,7 @@ from django.contrib import auth
 def index(request):
     return render(request, 'index.html',{
     })
-
+    
 def userinfo(request):
     if request.user.is_authenticated:
         return render(request, 'personal_info.html')

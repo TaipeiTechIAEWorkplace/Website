@@ -24,7 +24,7 @@
             <a id="name">{{ user.get_username }}</a>
         </p>
 
-        <div id="profile_pic"><img src="{{request.user.personalinformation.profile_pic.url}}"></div>
+        <div id="profile_pic"><img src="{{request.user.member.profile_pic.url}}"></div>
         <ul class="menu_dropdown">
             <li><a href="{% url 'userinfo' %}">個人資料</a></li>
             <li><a href="#">blablabla</a></li>
