@@ -7,7 +7,7 @@ body{
     justify-content: center;
 }
 .content_box{
-    min-width: 1000px;
+    min-width: 1100px;
     height: 600px;
     position: relative;
     top: 70px;
@@ -18,7 +18,7 @@ body{
     width: 100%;
     position: absolute;
     top: 20px;
-    left: 0px;
+    left: 50px;
     font: 600 30px 'Open Sans', sans-serif;
 }
 .title a{
@@ -30,7 +30,7 @@ body{
     height: 450px;
     position: relative;
     top: 85px;
-    left: 0px;
+    left: 50px;
     float: left;
 }
 .picture img{
@@ -43,10 +43,11 @@ body{
 
 .text{
     display: block;
+    padding-bottom: 30px;
     width: 450px;
     position: relative;
     top: 85px;
-    right: 0px;
+    right: 50px;
     float: right;
 }
 
@@ -64,16 +65,17 @@ body{
 }
 
 .inform{
-    width: 300px;
+    width: 430px;
     padding: 5px 0px 5px 5px;
     margin: -7px 0px -3px 15px;
     border-left: rgba(0, 0, 0, 0.5) 1px solid;
+    word-break: break-all;
 }
 
 .hashtag{
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    width: 450px;
     position: relative;
     margin: 10px 0px 20px 15px;
 }
@@ -92,11 +94,24 @@ body{
     -webkit-text-stroke: 0.5px #3366BB;
 }
 
+.comments{
+    height: 230px;
+    width: 490px;
+    margin-top: -10px;
+    overflow-y: scroll;
+    word-break: break-all;
+}
+.comments::-webkit-scrollbar{
+    width: 0.6em;
+    background-color: opacity;
+}
+.comments::-webkit-scrollbar-thumb{
+    background-color: #cccccc;
+    border-radius: 100px;
+}
+
 .comment{
-    padding: 3px 0px 3px 5px;
+    padding: 3px 23px 3px 5px;
     margin: 7px 0px 0px 15px;
     border-left: rgba(0, 0, 0, 0.5) 1px solid;
-}
-#first_comment{
-    margin-top: -7px;
 }
