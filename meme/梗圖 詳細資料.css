@@ -7,17 +7,18 @@ body{
     justify-content: center;
 }
 .content_box{
-    min-width: 1200px;
+    min-width: 1000px;
     height: 600px;
     position: relative;
-    top: 20px;
+    top: 70px;
     background-color: #ffffff;
 }
 
 .title{
+    width: 100%;
     position: absolute;
-    top: 70px;
-    left: 50px;
+    top: 20px;
+    left: 0px;
     font: 600 30px 'Open Sans', sans-serif;
 }
 .title a{
@@ -25,16 +26,16 @@ body{
 }
 
 .picture{ 
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     position: relative;
-    top: 135px;
-    left: 50px;
+    top: 85px;
+    left: 0px;
     float: left;
 }
 .picture img{
     display: block;
-    width: 500px;
+    width: 450px;
     position: relative;
     top: 0px;
     margin: auto;
@@ -42,10 +43,10 @@ body{
 
 .text{
     display: block;
-    width: 500px;
+    width: 450px;
     position: relative;
-    top: 135px;
-    right: 50px;
+    top: 85px;
+    right: 0px;
     float: right;
 }
 
