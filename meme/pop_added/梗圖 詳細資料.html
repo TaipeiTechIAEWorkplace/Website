@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>梗圖｜name｜詳細資料</title>
+    <link rel="stylesheet" href="梗圖 詳細資料.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="pop1.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="overlay" ></div>
+    <div class="pop" id="pop">
+        <div class="pop_header">
+            <p id="title">檢舉</p>
+        </div>
+        <div class="pop_body">
+            <div id="reason">
+                <p style="display: inline-block; font-size: 0.78rem; font-weight: bold;">檢舉原因：</p>
+                <p style="display: inline-block; font-size: 0.78rem; color: red;">(必填)</p>
+                <div id="checkbox">
+                    <div class="checkbox"><input class="checkbox" id="cb1" type="checkbox" name="原因" value="暴力"><label>暴力</label></div>
+                    <div class="checkbox"><input class="checkbox" id="cb2" type="checkbox" name="原因" value="色情"><label>色情</label></div>
+                    <div class="checkbox"><input class="checkbox" id="cb3" type="checkbox" name="原因" value="人身攻擊"><label>人身攻擊</label></div>
+                    <div class="checkbox"><input class="checkbox" id="cb4" type="checkbox" name="原因" value="傷眼睛"><label>傷眼睛</label></div>
+                    <div class="checkbox"><input class="checkbox" id="cb5" type="checkbox" name="原因" value="何大新"><label>何大新</label></div>
+                    <div class="checkbox"><input class="checkbox" id="cb6" type="checkbox" name="原因" value="其他"><label>其他</label></div>
+                </div>
+               
+            </div>
+            <div id="explain" style="margin-bottom: 8px;">
+                <p style="display: inline-block; font-size: 0.78rem; font-weight: bold;">說明</p>
+                <p style="display: inline-block; font-size: 0.78rem; color: red;">(必填)</p>
+                <br>
+                <textarea id="textarea" placeholder="請輸入檢舉緣由......(100字以內)" onkeyup="countChar(this)"></textarea>
+                <div class="count"><span id="count">100</span> /100</div>
+            </div>
+
+            <div id="submit_btn">
+                <button data-close-button class="check_button" id="cancel_btn">取消</button>
+                <button data-submit-button class="check_button" id="report_btn">檢舉</button>
+            </div>  
+        </div>
+        
+    </div>
+    <div class="menu">
+        <p class="menu_left">
+            <a href="#">HOME</a>
+            <a href="#">GAME</a>
+            <a href="#">PAGE</a>
+        </p>
+        <p class="menu_right">
+            <a id="name">Name123456789</a>
+        </p>
+        <div id="profile_pic"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"></div>
+        <ul class="menu_dropdown">
+            <li><a href="#">個人資料</a></li>
+            <li><a href="#">blablabla</a></li>
+            <li><a href="#">登出</a></li>
+        </ul>
+    </div>
+    <!-- Navbar -->
+
+    <div class="content">
+        <div class="pop" id="pop">
+            <div class="pop-header">
+                <p>檢舉</p>
+            </div>
+            <div class="pop-body">
+
+            </div>
+            <div class="check_button">
+
+            </div>
+        </div>
+        <div class="content_box">
+            
+            <div class="title">
+                梗圖name
+                <a href="">[編輯]</a>
+            </div>
+            <!-- 這是梗圖名字 由上傳者自己設定 -->
+
+            <div class="picture">
+                <img src="https://fakeimg.pl/400x400/">
+                <button data-pop-target="#pop" id="report"><a href="#">覺得這個照片有問題？</a></button>
+            </div>
+            
+            <div class="text">
+
+                <p class="subtitle">
+                    上傳者：
+                    <a id="uploaded_by" href="">某某某</a>
+                </p>
+                
+                <p class="subtitle">圖片描述</p>
+                <div class="inform">
+                    圖片描述的部分blablablablabla............然後blablabla...8888888888888888888888888888888888
+                </div>
+                
+                <div class="hashtag">    
+                    <label>
+                        <span>HashtagContent之類的
+                        </span>
+                    </label>
+                </div>
+
+                <p class="subtitle">留言</p>
+                <div class="comments">
+                    <p class="comment" id="first_comment">留言</p>
+                    <p class="comment">要用Django設定88888888888888888888888888888888888888888888888888888888</p>
+                    <p class="comment">要用Django設定</p>
+                    <p class="comment">要用Django設定</p>
+                    <p class="comment">要用Django設定</p>
+                    <p class="comment">要用Django設定</p>
+                    <p class="comment">要用Django設定</p>
+                    <p class="comment">要用Django設定</p>
+                    <p class="comment">要用Django設定</p>
+                    <p class="comment">要用Django設定</p>
+                    <p class="comment">要用Django設定</p>
+                    <p class="comment">要用Django設定</p>
+                </div>
+            
+            </div>
+        
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="pop1.js"></script>
+    </div>   
+</body>
+</html>
+

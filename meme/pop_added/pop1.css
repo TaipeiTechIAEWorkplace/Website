@@ -1,0 +1,121 @@
+
+#report{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
+}
+
+.pop{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 2.5px solid black;
+    border-radius: 3px;
+    z-index: 10;
+    background-color: white;
+    width: 250px;
+    max-width: 60%;
+}
+
+.pop.active{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.pop_header{
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 5px;
+    background-color: black;
+    line-height: 2px;
+}
+
+.pop_header #title{
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+#reason, #explain{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+input.checkbox{
+    width:25px;
+}
+
+.checkbox{
+    width: auto;
+    margin:2px;
+    cursor: pointer;
+}
+
+label{
+    font-size: 0.8rem;
+    margin-left: -6px;
+}
+
+#checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: -10px;
+    margin-left: -5px;
+}
+
+#textarea{
+    position: relative;
+    margin-top: -8.1px;
+    width: 100%;
+    height:50px;
+    border: 1.3px solid black;
+    border-radius: 3px;
+    font-size: 0.5rem;
+    resize: none;
+}
+
+.check_button{
+    background: none;
+    font-size: 0.7rem;
+    border:1.2px solid black;
+	cursor: pointer;
+    border-radius: 1.2px;
+}
+
+#report_btn{
+    margin-left: 8px;
+}
+
+#submit_btn{
+    margin-left: 59%;
+    margin-bottom: 10px;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0; 
+    z-index:9;
+    transition: 200ms ease-in-out;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    pointer-events: none;
+}
+
+#overlay.active{
+    opacity: 1;              
+    pointer-events: all;      /*沒辦法點「覺得照片.....」這個按鈕*/
+}
+
+.count{
+    font-size: 0.4rem;
+    margin-left: 88%;
+    margin-top: -3px;
+}
