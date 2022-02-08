@@ -14,7 +14,7 @@
     transform: translate(-50%,-50%) scale(0);
     transition: 200ms ease-in-out;
     border: 2.5px solid black;
-    border-radius: 3px;
+    border-radius: 3.4px;
     z-index: 10;
     background-color: white;
     width: 250px;
@@ -22,7 +22,7 @@
 }
 
 .pop.active{
-    transform: translate(-50%,-50%) scale(1);
+    transform: translate(-50%,-50%) scale(2.45);
 }
 
 .pop_header{
@@ -70,7 +70,7 @@ label{
 
 #textarea{
     position: relative;
-    margin-top: -8.1px;
+    margin-top: -5.1px;
     width: 100%;
     height:50px;
     border: 1.3px solid black;
