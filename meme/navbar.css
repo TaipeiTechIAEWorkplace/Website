@@ -1,3 +1,12 @@
+::-webkit-scrollbar{
+    width: 0.7em;
+    background-color: opacity;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #cccccc;
+    border-radius: 100px;
+}
+
 @keyframes click_button_1{
     from {background-color: #dddddd;}
     to {background-color: #ebebeb;}
