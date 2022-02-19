@@ -1,6 +1,6 @@
 body{
     background-color: #ffffff;
-    /* font: 600 16px/18px 'Open Sans',sans-serif; */
+    overflow: hidden;
 }
 
 /* menu */
@@ -229,6 +229,59 @@ body{
 }
   
   
+/* 梗圖 */
+.memes{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    
+    position: fixed;
+    top: 230px;
+    left: 90px;
+    width: 73%;
+    height: 70%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.meme{
+    position: relative;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    top: 10px;
+    padding: 2px 2px 5px 2px;
+    margin: 2px;
+}
+.meme a{
+    white-space: nowrap;
+}
+.meme img{
+    height: 200px;
+    cursor: pointer;
+}
+.meme:hover{
+    transform: scale(1.07, 1.07);
+    transition: all 0.3s ease-in;
+    z-index: 998;
+}
+.meme_like{
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    z-index: 999;
+    opacity: 0;
+}
+.meme_like::before{
+    content: '♡ ';
+}
+.meme:hover .meme_like{
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+/* 目前還沒解決字太多能夠不自動斷掉的問題 */
+
 
 /* 介紹 */
 .introduce{
