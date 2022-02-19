@@ -17,12 +17,12 @@
     border-radius: 3.4px;
     z-index: 10;
     background-color: white;
-    width: 250px;
+    width: 350px;
     max-width: 60%;
 }
 
 .pop.active{
-    transform: translate(-50%,-50%) scale(2.45);
+    transform: translate(-50%,-50%) scale(1.8);
 }
 
 .pop_header{
@@ -92,7 +92,7 @@ label{
 }
 
 #submit_btn{
-    margin-left: 59%;
+    margin-left: 87%;
     margin-bottom: 10px;
 }
 
@@ -105,7 +105,7 @@ label{
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.65);
     pointer-events: none;
 }
 
@@ -115,7 +115,7 @@ label{
 }
 
 .count{
-    font-size: 0.4rem;
+    font-size: 0.6rem;
     margin-left: 88%;
     margin-top: -3px;
 }
