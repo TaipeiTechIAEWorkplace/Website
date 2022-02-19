@@ -17,7 +17,7 @@
     border-radius: 3.4px;
     z-index: 10;
     background-color: white;
-    width: 350px;
+    width: 25%;
     max-width: 60%;
 }
 
@@ -92,7 +92,7 @@ label{
 }
 
 #submit_btn{
-    margin-left: 87%;
+    margin-left: 75%;
     margin-bottom: 10px;
 }
 
@@ -116,6 +116,6 @@ label{
 
 .count{
     font-size: 0.6rem;
-    margin-left: 88%;
+    margin-left: 90%;
     margin-top: -3px;
 }
