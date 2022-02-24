@@ -15,7 +15,25 @@
 }
 
 .pop.active{
-    transform: translate(-50%,-50%) scale(1);     /*將div置中，這裡的50%是div的長寬50%，而不是螢幕 */
+    transform: translate(-50%,-50%) scale(0.7);     /*將div置中，這裡的50%是div的長寬50%，而不是螢幕 */
+}
+
+.pop_image{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%) scale(0);
+  transition: 200ms ease-in-out;     /*scale從1變0時的動畫*/
+  z-index: 10002;
+
+  /* max-height: 82%;    超過此比例即用卷軸 */
+  
+  /* overflow-y: auto;  */
+}
+
+.pop_image.active{
+  transform: translate(-50%,-50%) scale(0.2); 
+ /*將div置中，這裡的50%是div的長寬50%，而不是螢幕 */
 }
 
 #overlay{
@@ -28,19 +46,38 @@
   bottom: 0;
   background-color: rgba(0,0,0,0.65);
   pointer-events: none;   /*當overlay沒啟動，可以按東西 */
+  clear:both;
 }
 
 #overlay.active{
   pointer-events: all;
   z-index: 9;
   opacity: 1;
+  clear:both;
+}
+
+#overlay2{
+  position: fixed;
+  transition: 200ms ease-in-out;
+  opacity:0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  pointer-events: none;   /*當overlay沒啟動，可以按東西 */
+  clear:both;
+}
+
+#overlay2.active{
+  pointer-events: all;
+  z-index: 10001;
+  opacity: 1;
+  clear:both;
 }
 
 .pop-header{
-    margin-top: 2.4%;
-    margin-right: 3%;
-    margin-left: 93%;
-    margin-bottom: 0%;
+  float:right;
 }
 
 .pop-header .close-button{
@@ -52,10 +89,13 @@
     font-weight: bold;
     color:white;
     border-radius: 15%;
+    margin-right: 20px;
+    margin-top: 20px;
 }
 
 .pop-body{
     display:flex;
+    clear:both;
 }
 
 #openpop{
@@ -114,10 +154,17 @@
     margin-left:50px;
     margin-right:15px;
     margin-bottom: 5%;
+    
 }
 
 #photo_div{
   transform: scale(0.8);
+  
+  background-image: cover;
+}
+
+#photo_div img{
+  border-radius: 50%;
 }
 
 
@@ -125,11 +172,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+ 
 }
 
 
 #photo{
   height:80%;
+  
 }
 
 
@@ -209,5 +258,12 @@
   display: none;
 }
 
+#person_photo_div{
+  background-image: cover;
+  
+}
 
-
+#person_photo{
+  object-fit: cover;
+  border-radius: 50%;
+}
