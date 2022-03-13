@@ -4,39 +4,22 @@
         <meta charset="UTF-8">
         {% block title %}<title>Memes</title>{% endblock %}
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/梗圖.css' %}">
+        <link rel="stylesheet" href="{% static 'memes/css/memes.css' %}">
+        <link rel="stylesheet" href="{% static 'memes/css/navbar.css' %}">
     </head>
-    <style>
-        .picture{
-            background-color: #FF0;
-            display: block;
-        }
-        .list{
-            display: inline;
-            border-color:black;
-            width: 320px;
-        }
-        .picture{
-            padding: 10px;
-            max-width: 300px;
-        }
-        .memetitle{
-            text-decoration: none;
-        }
-    </style>
     <body>
         <div class="menu">
             <p class="menu_left">
                 <a href="{% url 'main' %}">HOME</a>
-                <a href="{% url 'memes'%}">MEME</a>
+                <a href="{% url 'memes' %}">MEME</a>
                 <a href="{% url 'games' %}">GAME</a>
             </p>
             </p>
             <p class="menu_right">
                 {% if not user.is_authenticated %}
-                <a href="{% url 'login'%}?next={{request.path}}" id="name">Login</a>
+                <a href="{% url 'login'%}?next={% url 'main' %}" id="id">Login</a>
                 {% else %}
-                <a id="name">{{ user.get_username }}</a>
+                <a id="id">{{ user.get_username }}</a>
             </p>
             <div id="profile_pic"><img src="{{request.user.member.profile_pic.url}}"></div>
             <ul class="menu_dropdown">
@@ -45,7 +28,8 @@
                 <li><a href="{% url 'logout'%}?next={{request.path}}">登出</a></li>
             </ul>
             {% endif %}
-        </div>
+            </div>
+
 
         <div class="title">
             <br>
@@ -63,7 +47,15 @@
                 <span>壹貳參肆伍</span>
             </label>
         </div>
-
+        {% block content %}
+        <div class="photo">
+            {% for photo in photos %}
+                <a href="{% url 'picture' photo.id %}" class="memetitle">
+                <img src="{{ photo.image.url }}"/>
+                </a>
+            {% endfor %}
+        </div>
+        {% endblock %}
         <div class="introduce">
             <p>
                 介紹Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti 
@@ -74,9 +66,9 @@
         </div>
 
         <div class="upload_button">
-            <button>我要上傳→→</button>
+            <a href="{% url 'upload' %}">我要上傳→→</a>
         </div>
-        <div class="picture">
+        {% comment %} <div class="picture">
         {% for meme in memes %}
             <div class="list">
                 <a href="{% url 'picture' meme.id %}" class="memetitle">{{ meme.title }}</a>
@@ -85,7 +77,8 @@
                 {{ meme.uploader }}
                 {{ meme.image_description }}
             </div>
-        {% endfor %}
+        {% endfor %} 
+        </div> {% endcomment %}
     </div>
 
     </body>

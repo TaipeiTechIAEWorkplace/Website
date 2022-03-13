@@ -1,21 +1,35 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views import generic
 from django.core.files.storage import FileSystemStorage
+from django.contrib.auth.decorators import login_required
 
-from .models import Photo
+from memes.models import Photo, Tag
+from memes.forms import UploadModelForm
 
 def home(request):
     photolist = Photo.objects.all()
     return render(request, 'memes.html',{
-        'memes' : photolist
+        'photos' : photolist
     })
 
-def upload(request):
-    if request.method == 'POST' :
-        form = photoform(request.POST, request.FILES)
-    return render(request, 'upload.html',{
-    })
+@login_required(login_url='login')
+def photoUpload(request):
+    template= 'upload.html'
+    if request.method == "GET":
+        return render(request, template, {'form':UploadModelForm(initial={'uploader':request.user})})
+
+    if request.method == "POST":
+        
+        form = UploadModelForm(request.POST, request.FILES, initial={'uploader':request.user})
+        print(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('/memes')
+        else:
+            print("Fuck")
+            print(form)
+            return render(request, template, {'form': form})
 
 def picture(request, pk):
     meme = Photo.objects.get(id = pk)
@@ -25,6 +39,7 @@ def picture(request, pk):
         'tags' : tags
     })
 
+@login_required(login_url='login')
 def delete_picture(request, pk):
     if request.method == 'POST':
         pic = Photo.objects.get(pk)
