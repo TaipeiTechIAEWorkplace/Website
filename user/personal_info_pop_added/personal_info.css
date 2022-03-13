@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+body{
+    background-color: #ffffff;
+    /* font: 600 16px/18px 'Open Sans',sans-serif; */
+}
+
+/* scrollbar */
+main{
+    position: absolute;
+    top: 50px;
+    max-width: 1000;
+    margin: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+/* logo設計 */
+#logo{
+    margin-left:30px;
+    margin-top: 12px;
+}
+
+#home_icon{
+    position: relative;
+    left: 1230px;
+}
+
+/* 個人信息 */
+.container{
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+}
+
+#person_photo{
+    height: 250px;
+    width: 250px;
+ 
+} 
+
+#bio{
+    padding-left: 25px;
+    width:500px;
+}
+
+#id{
+    font-size: 40px;
+}
+
+#gmail{
+    margin-top:-45px;
+}
+
+#words{
+    margin-top:45px; 
+    font-size: 25px;
+}
+
+#more_words{
+    margin-top:-20px;
+}
+
+.container2{
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+}
+
+#meme{
+    position: relative;
+    top:30px;
+}
+
+#memeupload{
+    top:50px;
+    font-size: 25px; 
+    text-align:center;
+}
+
+#memenum{
+    font-size:25px; 
+    text-align:center;
+}
+
+#love{
+    position: relative;
+    top:45px;
+    left:60px;
+}
+
+#heart{
+    text-align:center; 
+    font-size:35px;
+    padding:0px;
+    margin: 0px;
+}
+
+#likenum{
+    font-size: 25px; 
+    text-align:center;
+}
+
+#change{
+    position: relative; 
+    top:200px; 
+    right:100px; 
+    font-size: 150%;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.meme{
+    display: flex;
+    flex-wrap: wrap; /*不會擠壓方塊，維持100px寬度(我們設定的)*/
+    flex-direction: row; /* 亦有row,row-reverse */
+    border:2px solid black;
+    justify-content: space-around; /* 亦有center,flex-end.flex-start(default),space-between,space-evenly */
+    margin: auto; 
+    padding: 5px; 
+    overflow: auto; 
+    width: 1000px;
+    height: 300px;
+}
+
+.meme div{
+    border: 1px solid rgb(102, 32, 75);
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+}

@@ -40,38 +40,46 @@ main{
     top: 10px;
 } */
 
+/* .button{
+    text-decoration: none;
+} */
+
 .title{
     /* margin-top: 150; */
     /* top: 150; */
-    padding: 5px 20px 10px 50px;
-    font-size: 85px;
+    /* padding: 2% 10% 2% 5%; */
+    margin: 1.5% 5% 1.5% 5%;
+    font-size: 11vmin;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #meme{
-    height: 220px;
+    height: 90%;
     width: auto;
-    margin: 15px;
+    margin: 1%;
 }
 
 .box{
-    margin: 0px 50px 20px 50px;
-    width: 1150px;
-    height: 250px;
-    background-color: aquamarine;
-}
-
-#box{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.75%;
+    width: 91%;
+    height: 47%;
+    background-color: #B4D9EF;
+    cursor: pointer;
     position: relative;
 }
 
 #topic{
-    font-size: 55px;
+    font-size: 6.5vmin;
     position: absolute;
-    top: 15px;
+    top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #info{
-    font-size: 30px;
+    font-size: 3.9vmin;
     position: absolute;
-    top: 130px;
+    top: 40%;
+    font-family: Arial, Helvetica, sans-serif;
 }
