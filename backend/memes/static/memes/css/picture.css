@@ -1,0 +1,51 @@
+.content{
+    display: flex;
+    justify-content: center;
+}
+.content_box{
+    min-width: 1200px;
+    height: 450px;
+    position: relative;
+    top: 70px;
+}
+
+
+body{
+    background-color: #fff;
+    /* font: 600 16px/18px 'Open Sans',sans-serif; */
+}
+
+/* scrollbar */
+main{
+    position: absolute;
+    top: 50px;
+    width: 99vw;
+    margin: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+.name{
+    width: 50%;
+    /* margin-bottom: 10px; */
+    text-align: center;
+}
+
+.picture{ /*垂直致中*/
+    width: 50%;
+    height: 80%;
+    /* margin: auto; */
+    text-align: center;   
+    position: fixed;
+    left: 0;
+}
+
+
+.text{
+    width: 50%;
+    /* margin: auto; */
+    text-align: left;
+    float: right;
+}
+

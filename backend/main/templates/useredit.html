@@ -49,8 +49,13 @@
                     <p id="likenum">{{request.user.member.likes}}</p>
                 </div>
             </div>
-            <div><a href="{% url 'useredit' %}" id="change">變更個人資料</a></div>
             <div class="meme"></div>
+            <form action="" method="POST" enctype="multipart/form-data">
+			    {% csrf_token %}
+                {{form.as_p}}
+			<input type="submit" name="submit">
+			</form>
+			</form>
         </main>
     </body>
 </html>
