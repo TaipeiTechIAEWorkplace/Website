@@ -1,7 +1,16 @@
 body{
-    overflow:hidden;
+    overflow: hidden;
     margin: 0;
     padding: 0;
+}
+
+
+.grid-container{
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    gap: 15px;
 }
 
 /* scrollbar */
@@ -15,65 +24,34 @@ main{
     scroll-behavior: smooth;
 }
 
-/* .menu{
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-} */
-
-/* .move{
-    position: absolute;
-    top: 60px;
-    display: block;
-
-    padding: -30;
-    z-index: 888;
-    height: 100000;
-    width: 1000;
-    overflow-y: scroll;
-
-    scroll-behavior: smooth;
-
-} */
-
-/* ::-webkit-scrollbar {
-    top: 10px;
-} */
-
-/* .button{
-    text-decoration: none;
-} */
-
 .title{
-    /* margin-top: 150; */
-    /* top: 150; */
-    /* padding: 2% 10% 2% 5%; */
     margin: 1.5% 5% 1.5% 5%;
     font-size: 11vmin;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #meme{
-    height: 90%;
+    height: 14em;
     width: auto;
-    margin: 1%;
+    margin-left: 1%;
 }
 
 .box{
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.75%;
-    width: 91%;
-    height: 47%;
+    display: flex;
+    width: 35em;
+    height: 15em;
     background-color: #B4D9EF;
     cursor: pointer;
     position: relative;
+    align-items: center;
+    padding: 5px;
 }
 
 #topic{
     font-size: 6.5vmin;
     position: absolute;
     top: 5%;
+    left: 35%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -81,5 +59,6 @@ main{
     font-size: 3.9vmin;
     position: absolute;
     top: 40%;
+    left: 35%;
     font-family: Arial, Helvetica, sans-serif;
 }
