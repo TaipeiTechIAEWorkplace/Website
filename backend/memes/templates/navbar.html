@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=candara">
+    <link rel="stylesheet" href="navbar.css">
+    <title>navbar</title>
 </head>
 <body>
-    <!-- Navbar -->
     <div class="menu">
         <p class="menu_left">
-            <a href="{% url 'games'%}">GAME</a>
-            <a href="{% url 'memes'%}">MEME</a>
-            <a href="{% url 'main'%}">HOME</a>
+            <a href="#">HOME</a>
+            <a href="{% url 'games' %}">GAME</a>
+            <a href="{% url 'memes' %}}">MEME</a>
         </p>
         <p class="menu_right">
             {% if not user.is_authenticated %}
@@ -23,7 +20,6 @@
             {% else %}
             <a id="id">{{ user.get_username }}</a>
         </p>
-
         <div id="profile_pic"><img src="{{request.user.member.profile_pic.url}}"></div>
         <ul class="menu_dropdown">
             <li><a href="{% url 'userinfo' %}">個人資料</a></li>
@@ -31,22 +27,6 @@
             <li><a href="{% url 'logout'%}?next={{request.path}}">登出</a></li>
         </ul>
         {% endif %}
-    </div>
-    <!-- Navbar -->
-
-    <video id="background-video" autoplay loop muted poster="{% static 'main/img/vid.jpg' %}">
-        <source src="{% static 'main/vid/vid.mp4' %}" type="video/mp4">
-    </video>
-    
-    <script>
-        var v = document.getElementById("background-video");
-        v.playbackRate = 0.69;
-    </script>
-
-    <div class="title-box">
-        <span class="iae">IAE2</span>
-        <span class="name">職場實務 :)</span>
-    </div>
-
+        </div>
 </body>
 </html>
