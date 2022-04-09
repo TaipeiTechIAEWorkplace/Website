@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>上傳Upload</title>
+        <link rel="stylesheet" href="upload.css">
+
+        <!--JQuery & bootsrtaps-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <!--Navbar-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark justify-content-center">
+            <div class="container-fluid">
+                <a class="navbar-brand abs" href="">威！真有梗ne！瑋！必須得吧！</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="#">梗圖</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">遊戲</a></li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto" style="cursor: pointer;">
+                        <li class="nav-item dropdown">
+                            <div class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a style="padding-right: 10px;">name</a>
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" style="height: 40px; border-radius: 100%;">
+                            </div>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item">上傳梗圖</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item">個人資料</a></li>
+                                <li><a class="dropdown-item">登出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+        <!-- <div class="back">
+            <a href="#">梗圖上傳</a>
+        </div> -->
+
+
+        <!--upload-->
+        <div class="container Container">
+                
+            <form action="" method="post" class="row justify-content-center">
+                <div class="upload_pic col-lg-6 col-md-12">
+                    <div class="pic">
+                        <img src="https://cdn-icons.flaticon.com/png/512/3097/premium/3097412.png?token=exp=1635582735~hmac=d25e6063ddd3adc5d8ccc89a0e8637f5">
+                        <label>
+                        <input id="upload_pic" type="file">
+                        上傳圖片 
+                        </label>
+                    </div>
+                </div>
+
+                <div class="data col-lg-6 col-md-8">
+                    <div class="group">
+                        <label for="name" class="label">梗圖名字：</label>
+                        <input id="name" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="author" class="label">上傳者：</label>
+                        <input id="author" type="text" class="input" value="name" readonly="readonly">
+                    </div>
+                    <div class="group">
+                        <label for="content" class="label">簡介：</label>
+                        <textarea id="content" row="3" class="content"></textarea>
+                    </div>
+
+                    <p class="add_hashtag_text">加入HashTag</p>
+                    <div class="hashtag">    
+                        <label>
+                            <input type="checkbox">
+                            <span>HashtagContent之類的</span>
+                        </label>
+                    </div>
+
+                    <p class="new_hashtag_text">
+                        新增HashTag
+                    </p>
+                    <div class="new_hashtag">
+                        <label for="new_hashtag">#</label>
+                        <input id="new_hashtag" type="text" class="input_hashtag">
+                        <button class="new_hashtag_field" value="new_hashtag_field">+</button>
+                    </div>
+
+                    <div class="submit">
+                        <input id="submit_button" type="submit" value="繳交">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </body>
+</html>
