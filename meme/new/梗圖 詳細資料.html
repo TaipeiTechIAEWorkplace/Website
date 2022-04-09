@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>梗圖｜name</title>
+        <link rel="stylesheet" href="梗圖 詳細資料.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </head>
+    <body>
+        <script>
+            window.onresize = function(){
+                document.documentElement.style.setProperty('--footerTop', window.innerHeight+'px');
+            }
+        </script>
+
+        <!--Navbar-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark justify-content-center">
+            <div class="container-fluid">
+                <a class="navbar-brand abs" href="">威！真有梗ne！瑋！必須得吧！</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="#">梗圖</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">遊戲</a></li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto" style="cursor: pointer;">
+                        <li class="nav-item dropdown">
+                            <div class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a style="padding-right: 10px;">name</a>
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" style="height: 40px; border-radius: 100%;">
+                            </div>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item">上傳梗圖</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item">個人資料</a></li>
+                                <li><a class="dropdown-item">登出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+
+        <div class="container Container">    
+            <div class="row justify-content-center">
+
+                <div class="title col-12">
+                    梗圖name
+                    <a href="">[編輯]</a>
+                </div>
+
+                <div class="picture col-lg-6 col-md-12">
+                    <img src="https://fakeimg.pl/400x400/">
+                    <a href="">覺得這個圖片有問題？</a>
+                </div>
+                
+                <div class="text col-lg-6 col-md-8">
+
+                    <p class="subtitle">
+                        上傳者：
+                        <a id="uploaded_by" href="">某某某</a>
+                    </p>
+                    
+                    <p class="subtitle">圖片描述</p>
+                    <div class="inform">
+                        圖片描述的部分blablablablabla............然後blablabla...8888888888888888888888888888888888
+                    </div>
+                    
+                    <div class="hashtag">    
+                        <label>
+                            <span>HashtagContent之類的
+                            </span>
+                        </label>
+                    </div>
+
+                    <p class="subtitle">留言</p>
+                    <div class="comments">
+                        <p class="comment" id="first_comment">留言</p>
+                        <p class="comment">要用Django設定88888888888888888888888888888888888888888888888888888888</p>
+                        <p class="comment">要用Django設定</p>
+                        <p class="comment">要用Django設定</p>
+                        <p class="comment">要用Django設定</p>
+                        <p class="comment">要用Django設定</p>
+                        <p class="comment">要用Django設定</p>
+                        <p class="comment">要用Django設定</p>
+                        <p class="comment">要用Django設定</p>
+                        <p class="comment">要用Django設定</p>
+                        <p class="comment">要用Django設定</p>
+                        <p class="comment">要用Django設定</p>
+                    </div>
+                
+                </div>
+            
+            </div>
+        </div>    
+
+        <!--footer-->
+        <footer>
+            <div class="Footer">
+                <p>
+                    大家好，我們是「威！真有梗ne！瑋！必須得吧！」小組！</br>
+                    這是我們的職場實務專題！有任何問題都可以去問林宏信：▽</br>
+                </p>
+                <p class="footer-footer">
+                    <a href="#">首頁</a>｜
+                    <a href="#">梗圖</a>｜
+                    <a href="#">遊戲</a>｜
+                    <a href="#">聯絡我們</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
+
