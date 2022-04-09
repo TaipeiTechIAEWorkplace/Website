@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="personal_info.css" rel="stylesheet" media="all">
+        <title>個人信息</title>
+        <link href="navbar.css" rel="stylesheet" media="all">
+        <link href="pop.css" rel="stylesheet" media="all">
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="menu">
+            <p class="menu_left">
+                <a href="#">HOME</a>
+                <a href="#">GAME</a>
+                <a href="#">PAGE</a>
+            </p>
+            <p class="menu_right">
+                <a id="name">Name123456789</a>
+            </p>
+            <div><img id="profile_pic" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"></div>
+            <ul class="menu_dropdown">
+                <li><a href="#">個人資料</a></li>
+                <li><a href="#">blablabla</a></li>
+                <li><a href="#">登出</a></li>
+            </ul>
+        </nav>
+        <!-- Navbar -->
+
+        <main class="container">
+            <div id="person_photo_div">
+                <img id="person_photo" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="個人照片">
+            </div>
+            <div id="bio">
+                <p id="id">威爾森</p>
+                <p id="gmail">t1082b00xx@gmail.com</p>
+                <p id="words">簡介</p>
+                <p id="more_words">Hello, I am Wilson. I love playing tennis and programming. Iafqafqgfvewgvwgeragaergtergeargersg</p>
+            </div>
+            <div class="container2">
+                <div id=meme>
+                    <p id="memeupload">上傳梗圖</p>
+                    <p id="memenum">85</p>
+                </div>
+                <div id="love">
+                    <p id="heart">♡</p>
+                    <p id="likenum">0</p>
+                </div>
+            </div>
+            <div><a id="change"><button data-pop-target="#pop" id="openpop">變更個人資料</button></a></div>
+            <div class="meme"></div>
+
+
+            <div class="pop" id="pop">
+                <div class="pop-header">
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="pop-body">
+                    <div id="photo_box">
+                        <div id="photo_div" class="photo_div"><div id="photo"></div></div>
+                        <div class="upload_pic">
+                            <label>
+                            <input id="upload_pic" type="file" onchange="display_image(event)">
+                            上傳相片 
+                            </label>
+                        </div>
+                    </div>
+                    <div id="info">
+                        <div class="group">
+                            <label for="account_name" class="label">帳號/名稱：<span id="account_name" class="account_name_class"></span></label>
+                            
+                            <label for="email" class="label">電子信箱：<span id="email" class="email_class"></span></label>
+                            
+                            <form>
+                                <label for="content" class="label">簡介：</label>
+                                <textarea id="content" row="3" class="content"></textarea>
+                            </form>
+                            <div class="submit" id="submit_btn">
+                                <button data-close-button class="check_button" id="cancel_btn">取消</button>
+                                <button data-submit-button class="check_button" id="report_btn">確認</button>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_image" id="pop_image">
+
+            </div>
+
+            <div id="overlay"></div>
+            <div id="overlay2"></div>
+            
+        </main>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script src="pop.js"></script>
+    </body>
+    
+</html>

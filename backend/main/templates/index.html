@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=candara">
 </head>
 <body>
@@ -19,9 +19,9 @@
         </p>
         <p class="menu_right">
             {% if not user.is_authenticated %}
-            <a href="{% url 'login'%}?next={{request.path}}" id="name">Login</a>
+            <a href="{% url 'login'%}?next={% url 'main' %}" id="id">Login</a>
             {% else %}
-            <a id="name">{{ user.get_username }}</a>
+            <a id="id">{{ user.get_username }}</a>
         </p>
 
         <div id="profile_pic"><img src="{{request.user.member.profile_pic.url}}"></div>
@@ -34,8 +34,8 @@
     </div>
     <!-- Navbar -->
 
-    <video id="background-video" autoplay loop muted poster="{% static 'img/vid.jpg' %}">
-        <source src="{% static 'vid/vid.mp4' %}" type="video/mp4">
+    <video id="background-video" autoplay loop muted poster="{% static 'main/img/vid.jpg' %}">
+        <source src="{% static 'main/vid/vid.mp4' %}" type="video/mp4">
     </video>
     
     <script>

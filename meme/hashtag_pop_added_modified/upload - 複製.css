@@ -1,0 +1,377 @@
+body{
+    background-color: #ffffff;
+    /* font: 600 16px/18px 'Open Sans',sans-serif; */
+}
+
+/* scrollbar */
+main{
+  position: absolute;
+  top: 50px;
+  width: 99vw;
+  margin: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+/* menu */
+@keyframes click_button_1{
+  from {background-color: #dddddd;}
+  to {background-color: #ebebeb;}
+}
+@keyframes click_button_2{
+  from {background-color: #dddddd;}
+  to {background-color: #F5F5F5;}
+}
+
+.menu{
+  position: fixed;
+  width: 100%;
+  height: 52px;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+
+  background-color: #282a35;
+  box-shadow: 0px 2px 5px gray;
+}
+
+.menu a{
+  display: inline;
+  padding: 17px 20px;
+  height: 52px;
+  text-decoration: none;
+}
+
+.menu_left{
+  position: fixed;
+  float: left;
+  left: 25px;
+  cursor: pointer;
+  
+  text-align: center;
+}
+.menu_left a{
+  font: small-caps bold 17px sans-serif;
+  color: #ffffff;
+}
+.menu_left a:hover {
+  background-color: #ebebeb;
+  color: #000000;
+  transition-duration: 0.1s;
+}
+.menu_left a:active{
+  animation-name: click_button_1;
+  animation-duration: 1s;
+}
+
+.menu_right{
+  position: fixed;
+  float: right;
+  top: 3px;
+  right: 70px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+}
+.menu img{
+  position: fixed;
+  top: 13px;
+  right: 40px;
+  width: 27px;
+  cursor: pointer;
+}
+
+.menu_dropdown{
+  position: fixed;
+  top: 36px;
+  right: 5px;
+
+  list-style-type: none;
+}
+.menu_dropdown a{
+  display: none;
+  width: 120px;
+  height: 25px;
+
+  font: small-caps, Arial, Helvetica bold 17px sans-serif;
+  color: #ffffff;
+  background-color: #3B3E4F;
+
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+}
+.menu_dropdown a:hover {
+  display: inline-block;
+  background-color: #F5F5F5;
+  color: #000000;
+  transition-duration: 0.1s;
+}
+.menu_dropdown a:active{
+  animation-name: click_button_2;
+  animation-duration: 1s;
+}
+
+#profile_pic{
+  position: fixed;
+  top: 0px;
+  right: 30px;
+  width: 47px;
+  height: 54px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+
+}
+#profile_pic:hover + ul>li>a{
+  display: inline-block;
+}
+.menu_dropdown:hover >li>a:not(:hover){
+  display: inline-block;
+}
+
+/* 回到上一頁 */
+.back{
+  position: absolute;
+  top: 70px;
+  left: 23px;
+}
+.back a{
+  color: #000000;
+  font: 600 18px 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+.back a::before{
+  content: '<  ';
+}
+
+/* upload */
+
+.upload{
+  display: flex;
+  justify-content: center;
+}
+.upload_box{
+  min-width: 1000px;
+  height: 500px;
+  position: relative;
+  top: 40px;
+  background-color: #ffffff;
+}
+
+
+@keyframes upload_button{
+  from{background-color: #666666;}
+  to{background-color: #878787;}
+}
+.upload_pic{ 
+  width: 400px;
+  height: 400px;
+  position: relative;
+  top: 110px;
+  left: 25px;
+  float: left;
+  border: #545454 2.5px dashed;
+  border-radius: 40px;
+  background-color: #dddddd;
+}
+.upload_pic img{
+  display: block;
+  width: 70px;
+  position: relative;
+  top: 125px;
+  margin: auto;
+  opacity: 0.5;
+}
+.upload_pic label{
+  display: inline-block;
+  position: absolute;
+  left: 143px;
+  bottom: 125px;
+  margin: auto;
+  padding: 15px 25px 15px 25px;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #666666;
+  font-size: 16px;
+  cursor: pointer;
+}
+.upload_pic label:hover{
+  background-color: #878787;
+}
+.upload_pic label:active{
+  animation-name: upload_button;
+  animation-duration: 0.5s;
+}
+.upload_pic input{
+  display: none;
+}
+
+
+.data{
+  display: block;
+  position: relative;
+  top: 60px;
+  right: 25px;
+  float: right;
+}
+
+.group{
+  position: relative;
+}
+.group label{
+  font: 600 18px 'Open Sans', sans-serif;
+}
+.group input, .group textarea{
+	display: block;
+  width: 400px;
+  margin: 5px 0px 20px 10px;
+	padding: 15px 20px;	
+  border: none;
+	border-radius: 10px;
+	background-color: #ededed;
+}
+.group textarea{
+  resize: none;
+}
+#author ::placeholder{
+  color: #000000;
+}
+
+.hashtag{
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  position: relative;
+  margin: 5px 0px 20px 10px;
+}
+.add_hashtag_text{
+  margin-bottom: 0px;
+  font: 600 18px 'Open Sans', sans-serif;
+}
+
+.hashtag label{
+  cursor: pointer;
+}
+.hashtag input[type="checkbox"]{
+  display: none;
+}
+.hashtag span{
+  display: inline-block;
+  padding: 2px 10px 2px 10px;
+  margin: 3px 1px 3px 1px;
+
+  color: #3366BB;
+  border: #666666 1px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+.hashtag span::before{
+  content: '# ';
+  color: transparent;
+  -webkit-text-stroke: 0.5px #3366BB;
+}
+.hashtag input[type="checkbox"]:checked + span{
+  border: #7194FF 1px solid;
+  background-color: #7194FF;
+  color: #ffffff;
+}
+.hashtag input[type="checkbox"]:checked + span::before{
+  -webkit-text-stroke: 0.5px #ffffff;
+}
+
+.new_hashtag_text{
+  margin-bottom: 0px;
+  font: 600 18px 'Open Sans', sans-serif;
+}
+.new_hashtag_field{
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 15%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.new_hashtag_field:hover{
+  background-color: #f2f2f2;
+}
+@keyframes new_hashtag_field {
+  from{background-color: #e3e3e3;}
+  to{background-color: #ffffff;}
+}
+.new_hashtag_field:active{
+  animation-name: new_hashtag_field;
+  animation-duration: 1s;
+}
+
+.new_hashtag4{
+  display: block;
+  margin-left: 0px;
+}
+
+.new_hashtag label{
+  position: absolute;
+  left:13px;
+  top:13px;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #3366BB;
+}
+
+.new_hashtag input{
+  width: 388px;
+  margin: 0px 0px 20px 0px;
+	padding: 15px 20px 15px 32px;	
+  border: none;
+	border-radius: 25px;
+  color: #3366BB;
+	background-color: #ededed;
+  max-width: 80%;
+}
+
+.new_hashtag2{
+  position: relative;
+}
+
+.input, .content, .input_hashtag{
+  font-size: 16px;
+}
+
+
+.submit{
+  position: relative;
+  right: 0px;
+  float: right;
+  margin: 15px 0px 10px 20px;
+  z-index: 9;
+}
+
+
+
+.submit input{
+  padding: 5px 35px;
+  color: #ffffff;
+  background-color: #545454;
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px 1px gray;
+  font: 600 16px 'Open Sans', sans-serif;
+  cursor: pointer;
+}
+.submit input:hover{
+  background-color: #757575;
+}
+@keyframes submit_button{
+  from{background-color: #545454;}
+  to{background-color: #757575;}
+}
+.submit input:active{
+  animation-name: submit_button;
+  animation-duration: 0.5s;
+  top: -47px;
+  box-shadow: none;
+  transition-duration: 0.05s;
+}
