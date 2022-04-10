@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>登錄 LoginPage</title>
+        <link rel="stylesheet" href="login.css">
+
+         <!--JQuery & bootsrtaps-->
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script> 
+    </head>
+    <body>
+
+        <!--Navbar-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark justify-content-center">
+            <div class="container-fluid">
+                <a class="navbar-brand abs" href="">威！真有梗ne！瑋！必須得吧！</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">梗圖</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">遊戲</a></li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto" style="cursor: pointer;">
+                        <li class="nav-item dropdown">
+                            <div class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a style="padding-right: 10px;">name</a>
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" id="profile_pic" style="height: 40px; border-radius: 100%;">
+                            </div>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item">上傳梗圖</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item">個人資料</a></li>
+                                <li><a class="dropdown-item">登出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--登錄-->
+        <div class="LogIn_box">    
+            <div class="LogIn">
+
+                <!--登入or註冊-->
+                <input id="tab-1" type="radio" name="tab" class="SignIn" checked><label for="tab-1" class="tab">登入</label>
+                <input id="tab-2" type="radio" name="tab" class="SignUp"><label for="tab-2" class="tab">註冊</label>
+
+                <div class="LogIn_form">
+                    <!--登入-->
+                    <div class="SignIn_form">
+                        <div class="group">
+                            <label for="account" class="label">帳號</label>
+                            <input id="account" type="text" class="input" placeholder="電子信箱/用戶名稱">
+                        </div>
+                        <div class="group">
+                            <label for="password" class="label">密碼</label>
+                            <input id="password" type="password" class="input" data-type="password">
+                        </div>
+                        <div class="group">
+                            <input id="check" type="checkbox" class="check">
+                            <label for="check"><span class="icon"></span> 保持登入</label>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="登入">
+                        </div>
+                        <div class="hr"></div>
+				        <div class="below">
+					        <a href="#">忘記密碼？</a>
+				        </div>
+                    </div>
+
+                    <!--註冊-->
+                    <div class="SignUp_form">
+                        <div class="group">
+                            <label for="username" class="label">用戶名稱</label>
+                            <input id="username" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <label for="email" class="label">E-mail</label>
+                            <input id="email" type="email" class="input">
+                        </div>
+                        <div class="group">
+                            <label for="password" class="label">設定密碼</label>
+                            <input id="password" type="password" class="input" data-type="password">
+                        </div>
+                        <div class="group">
+                            <label for="password" class="label">確認密碼</label>
+                            <input id="password" type="password" class="input" data-type="password">
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="註冊帳號">
+                        </div>
+                        <div class="hr"></div>
+				        <div class="below">
+					        <label for="tab-1">想起帳號了嗎？</label>
+				        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

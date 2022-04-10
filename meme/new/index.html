@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>首頁</title>
+        <link rel="stylesheet" href="index.css">
+
+        <!--JQuery & bootsrtaps-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    
+        <!--aos-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </head>
+    <body>
+
+        <!--Navbar-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark justify-content-center">
+            <div class="container-fluid">
+                <a class="navbar-brand abs" href="">威！真有梗ne！瑋！必須得吧！</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">梗圖</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">遊戲</a></li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto" style="cursor: pointer;">
+                        <li class="nav-item dropdown">
+                            <div class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a style="padding-right: 10px;">name</a>
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" style="height: 40px; border-radius: 100%;">
+                            </div>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item">上傳梗圖</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item">個人資料</a></li>
+                                <li><a class="dropdown-item">登出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--影片-->
+        <video controls muted autoplay loop>
+            <source src="./vid.mp4" type="video/mp4">
+            <source src="./static.png" type="image/png">
+        </video>
+ 
+        <div class="Container">
+
+            <!--梗圖-->
+            <div class="block" onclick="location.href='';">
+                <h1>梗圖</h1>
+                <p>我們班的崩壞實錄，實用於聊天以及心理攻擊。</p>
+            </div>
+
+            <!--遊戲-->
+            <div class="block" onclick="location.href='';">
+                <h1>遊戲</h1>
+                <p>體驗看看智動科荒謬日常嗎：）</p>
+            </div>
+            
+        </div>
+
+    </body>
+</html>

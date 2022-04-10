@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8">
-        <title>name｜梗圖 Memes</title>
-        <link rel="stylesheet" href="梗圖 詳細資料.css">
+        <title>梗圖 Memes</title>
+        <link rel="stylesheet" href="梗圖.css">
 
         <!--JQuery & bootsrtaps-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -49,60 +49,98 @@
                 </div>
             </div>
         </nav>
-        
 
-        <div class="container Container">    
-            <div class="row justify-content-center">
 
-                <div class="title col-12">
-                    梗圖name
-                    <a href="">[編輯]</a>
+        <div class="title">
+            <h1>梗圖...</h1>
+            <div class="search">
+                <div>
+                    <input type="text" placeholder="Search . . ." required>
                 </div>
-
-                <div class="picture col-lg-6 col-md-12">
-                    <img src="https://fakeimg.pl/400x400/">
-                    <a href="">覺得這個圖片有問題？</a>
-                </div>
-                
-                <div class="text col-lg-6 col-md-8">
-
-                    <p class="subtitle">
-                        上傳者：
-                        <a id="uploaded_by" href="">某某某</a>
-                    </p>
-                    
-                    <p class="subtitle">圖片描述</p>
-                    <div class="inform">
-                        圖片描述的部分blablablablabla............然後blablabla...8888888888888888888888888888888888
-                    </div>
-                    
-                    <div class="hashtag">    
-                        <label>
-                            <span>HashtagContent之類的
-                            </span>
-                        </label>
-                    </div>
-
-                    <p class="subtitle">留言</p>
-                    <div class="comments">
-                        <p class="comment" id="first_comment">留言</p>
-                        <p class="comment">要用Django設定88888888888888888888888888888888888888888888888888888888</p>
-                        <p class="comment">要用Django設定</p>
-                        <p class="comment">要用Django設定</p>
-                        <p class="comment">要用Django設定</p>
-                        <p class="comment">要用Django設定</p>
-                        <p class="comment">要用Django設定</p>
-                        <p class="comment">要用Django設定</p>
-                        <p class="comment">要用Django設定</p>
-                        <p class="comment">要用Django設定</p>
-                        <p class="comment">要用Django設定</p>
-                        <p class="comment">要用Django設定</p>
-                    </div>
-                
-                </div>
-            
             </div>
-        </div>    
+        </div>
+
+        <div class="hashtag">
+            <label>
+                <input type="checkbox">
+                <span>壹貳參肆伍</span>
+            </label>
+        </div>
+
+        <div class="memes">
+            <div class="meme"> 
+                <img class="meme_img" src="https://via.placeholder.com/150x300">
+                <a class="meme_name">第一個圖片一二三四五六七八</a>
+                <a class="meme_like">30</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/150x100">
+                <a class="meme_name">第二個圖片</a>
+                <a class="meme_like">30000</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/150x150">
+                <a class="meme_name">第三個圖片</a>
+                <a class="meme_like">100</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/150x100">
+                <a class="meme_name">圖片</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/350x110">
+                <a class="meme_name">圖片</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/150x150">
+                <a class="meme_name">圖片</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/450x550">
+                <a class="meme_name">圖片</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/450x550">
+                <a class="meme_name">圖片</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/450x450">
+                <a class="meme_name">圖片</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/450x650">
+                <a class="meme_name">圖片</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/350x550">
+                <a class="meme_name">圖片</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/450x550">
+                <a class="meme_name">圖片</a>
+            </div>
+            <div class="meme">
+                <img class="meme_img" src="https://via.placeholder.com/450x550">
+                <a class="meme_name">圖片</a>
+            </div>
+        </div>
+
+        <div class="introduce">
+            <p>
+                介紹Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti corporis asperiores tempore ex maiores obcaecati possimus commodi, iusto dignissimos.
+                <br><br>
+                made by ...
+            </p>
+        </div>
+
+        <div class="upload_button">
+            <button>我要上傳→→</button>
+        </div>
+
+        <div class="picture">
+            <div><img src=""></div>
+        </div>
+
 
         <!--footer-->
         <footer>
@@ -119,6 +157,6 @@
                 </p>
             </div>
         </footer>
+
     </body>
 </html>
-

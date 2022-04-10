@@ -2,6 +2,19 @@ body{
     background-color: #ffffff;
 }
 
+
+/* navbar */
+#profile_pic{
+	height: 40px; 
+	border-radius: 100%;
+}
+@media screen and (max-width: 991px){
+	#profile_pic{
+		display: none;
+	}
+}
+
+
 /* 回到上一頁 */
 .back{
   position: absolute;

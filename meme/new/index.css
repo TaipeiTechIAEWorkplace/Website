@@ -1,0 +1,83 @@
+@keyframes fadein{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+body{
+    margin: 0;
+    background-color: #282827;
+    animation: fadein 1s ease-in;
+}
+
+
+/* navbar */
+#profile_pic{
+	height: 40px; 
+	border-radius: 100%;
+}
+@media screen and (max-width: 991px){
+	#profile_pic{
+		display: none;
+	}
+}
+
+
+
+video{
+    position: fixed;
+    top: -10%;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -999;
+}
+
+
+.Container{
+    width: 100%;
+    position: relative;
+    top: calc( 56px + 100px );
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.block{
+    width: 32%;
+    height: 400px;
+    margin: 30px 30px 30px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.075);
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.block h1, 
+.block p{
+    color: white;
+}
+.block h1{
+    font-weight: bold;
+}
+.block p{
+    margin: 0px 25px 0px 25px;
+}
+.block:hover{
+    transform: scale(1.1, 1.1);
+}
+
+
+@media screen and (max-width: 750px){
+    .Container{
+        padding-bottom: 150px;
+        flex-direction: column;
+    }
+    .block{
+        width: 70%;
+    }
+} 
