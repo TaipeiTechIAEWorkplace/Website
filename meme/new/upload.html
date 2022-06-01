@@ -12,6 +12,16 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     </head>
     <body>
+        <script>
+            $(function(){
+                $("#upload_pic").on('click', function(){
+                    var img_h = $("#subimg").height;
+                    if( img_h > 350 ){
+                        $(".pic").css("height", ( $("#subimg").height+50 ) +"px");
+                    }
+                })
+            });
+        </script>
 
         <!--Navbar-->
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark justify-content-center">
@@ -57,7 +67,7 @@
             <form action="" method="post" class="row justify-content-center">
                 <div class="upload_pic col-lg-6 col-md-12 align-self-start">
                     <div class="pic">
-                        <img src="https://cdn-icons.flaticon.com/png/512/3097/premium/3097412.png?token=exp=1635582735~hmac=d25e6063ddd3adc5d8ccc89a0e8637f5">
+                        <img id="subimg" src="https://cdn-icons.flaticon.com/png/512/3097/premium/3097412.png?token=exp=1635582735~hmac=d25e6063ddd3adc5d8ccc89a0e8637f5">
                         <label>
                         <input id="upload_pic" type="file">
                         上傳圖片 

@@ -16,6 +16,18 @@
             window.onresize = function(){
                 document.documentElement.style.setProperty('--footerTop', window.innerHeight+'px');
             }
+
+            var like = false;
+            $("#like").click( function() {
+                if( $("#like").prop('checked') ){
+                    $("#like_img").attr( "src", "heart2.png" );
+                    like = true;
+                }
+                else{
+                    $("#like_img").attr( "src", "heart1.png" );
+                    like = false;
+                }
+            })
         </script>
 
         <!--Navbar-->
@@ -54,9 +66,16 @@
         <div class="container Container">    
             <div class="row justify-content-center">
 
-                <div class="title col-12">
+                <div class="title col-11">
                     梗圖name
                     <a href="">[編輯]</a>
+                </div>
+                <div class="col-1">
+                    <input type="checkbox" id="like">
+                    <label for="like" id="likes">
+                        <img id="like_img" src="heart1.png"></img>
+                        <p>20</p>
+                    </label>
                 </div>
 
                 <div class="picture col-lg-6 col-md-12">
@@ -84,8 +103,12 @@
                     </div>
 
                     <p class="subtitle">留言</p>
+                    <div class="new_comment">
+                        <textarea id="input_comment" name="input_comment" rows="2" class="input_comment" placeholder="輸入留言" required></textarea>
+                        <button class="new_comment_field" value="new_comment_field">+</button>
+                    </div>
                     <div class="comments">
-                        <p class="comment" id="first_comment">留言</p>
+                        <p class="comment">留言</p>
                         <p class="comment">要用Django設定88888888888888888888888888888888888888888888888888888888</p>
                         <p class="comment">要用Django設定</p>
                         <p class="comment">要用Django設定</p>

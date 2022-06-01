@@ -15,7 +15,44 @@
         <script>
             window.onresize = function(){
                 document.documentElement.style.setProperty('--footerTop', window.innerHeight+'px');
-            }
+            };
+
+            // 左右滾動（https://www.aiwalls.com/javascript%E7%B7%A8%E7%A8%8B%E6%95%99%E5%AD%B8/14/33163.html）
+            $(function(){ 
+                // 設定頁面
+                var page= 1;
+
+                // 向右滾動（next）
+                $("#hashtag_next").on( 'click', function(){
+                    var HASHTAG = $(this).parents(".hashtag");    //根據當前點擊的元素獲取到父元素 
+                    var hashtag_list = HASHTAG.find(".hashtag_list");
+                        
+                    var all_width = hashtag_list.width(); 
+                    var div_width = HASHTAG.width();
+                    var pages = all_width / div_width;
+
+                    if( page!=pages ){ 
+                        hashtag_list.animate({left: '-=' + all_width}, "slow"); 
+                        page++;
+                    }
+                }); 
+                
+                //向左滾動 
+                $("#hashtag_prev").on( 'click', function(){ 
+                    var HASHTAG = $(this).parents(".hashtag");    //根據當前點擊的元素獲取到父元素 
+                    var hashtag_list = HASHTAG.find(".hashtag_list");
+                        
+                    var all_width = hashtag_list.width(); 
+                    var div_width = HASHTAG.width();
+                    var pages = all_width / div_width;
+
+                    if( page!=1 ){ 
+                        hashtag_list.animate({left: '+=' + all_width}, "slow"); 
+                        page--;
+                    }
+                }); 
+            }); 
+
         </script>
 
         <!--Navbar-->
@@ -53,18 +90,56 @@
 
         <div class="title">
             <h1>梗圖...</h1>
-            <div class="search">
-                <div>
-                    <input type="text" placeholder="Search . . ." required>
-                </div>
+            <div class="upload_button">
+                <button>我要上傳→→</button>
             </div>
         </div>
 
         <div class="hashtag">
-            <label>
-                <input type="checkbox">
-                <span>壹貳參肆伍</span>
-            </label>
+            <a class="hashtag_btn" id="hashtag_prev" href="#"></a>
+            <div class="hashtag_list">
+                <label>
+                    <input type="checkbox">
+                    <span>壹貳參肆伍</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span>壹貳參肆伍</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span>壹貳參肆伍</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span>壹貳參肆伍</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span>壹貳參肆伍</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span>壹貳參肆伍</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span>壹貳參肆伍</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span>壹貳參肆伍</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span>壹貳參肆伍</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span>壹貳參肆伍</span>
+                </label>
+            </div>
+            <a class="hashtag_btn" id="hashtag_next" href="#"></a>
         </div>
 
         <div class="memes">
@@ -86,55 +161,60 @@
             <div class="meme">
                 <img class="meme_img" src="https://via.placeholder.com/150x100">
                 <a class="meme_name">圖片</a>
+                <a class="meme_like">100</a>
             </div>
             <div class="meme">
                 <img class="meme_img" src="https://via.placeholder.com/350x110">
                 <a class="meme_name">圖片</a>
+                <a class="meme_like">100</a>
             </div>
             <div class="meme">
                 <img class="meme_img" src="https://via.placeholder.com/150x150">
                 <a class="meme_name">圖片</a>
+                <a class="meme_like">100</a>
             </div>
             <div class="meme">
                 <img class="meme_img" src="https://via.placeholder.com/450x550">
                 <a class="meme_name">圖片</a>
+                <a class="meme_like">100</a>
             </div>
             <div class="meme">
                 <img class="meme_img" src="https://via.placeholder.com/450x550">
                 <a class="meme_name">圖片</a>
+                <a class="meme_like">100</a>
             </div>
             <div class="meme">
                 <img class="meme_img" src="https://via.placeholder.com/450x450">
                 <a class="meme_name">圖片</a>
+                <a class="meme_like">100</a>
             </div>
             <div class="meme">
                 <img class="meme_img" src="https://via.placeholder.com/450x650">
                 <a class="meme_name">圖片</a>
+                <a class="meme_like">100</a>
             </div>
             <div class="meme">
                 <img class="meme_img" src="https://via.placeholder.com/350x550">
                 <a class="meme_name">圖片</a>
+                <a class="meme_like">100</a>
             </div>
             <div class="meme">
                 <img class="meme_img" src="https://via.placeholder.com/450x550">
                 <a class="meme_name">圖片</a>
+                <a class="meme_like">100</a>
             </div>
             <div class="meme">
                 <img class="meme_img" src="https://via.placeholder.com/450x550">
                 <a class="meme_name">圖片</a>
+                <a class="meme_like">100</a>
             </div>
         </div>
 
         <div class="introduce">
             <p>
-                介紹Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti corporis asperiores tempore ex maiores obcaecati possimus commodi, iusto dignissimos.
-                <br><br>
-                made by ...
+                大家好，我們是「威！真有梗ne！瑋！必須得吧！」小組！<br>
+                這是我們的職場實務專題！有任何問題都可以去問林宏信：▽
             </p>
-        </div>
-
-        <div class="upload_button">
-            <button>我要上傳→→</button>
         </div>
 
         <div class="picture">

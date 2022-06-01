@@ -48,37 +48,37 @@ form{
   margin-top: 300px;
   float: left;
 }
+
 .pic{ 
   width: 400px;
-  height: 400px;
+  min-height: 400px;
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -200px 0 0 -200px;
-  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   border: #545454 2.5px dashed;
   border-radius: 40px;
   background-color: #dddddd;
 }
-.pic img{
+#subimg{
+  position: absolute;
   display: block;
-  width: 70px;
-  position: relative;
-  top: 125px;
-  margin: auto;
-  opacity: 0.5;
+  width: 350px;
 }
 .pic label{
   display: inline-block;
   position: absolute;
-  left: 143px;
-  bottom: 125px;
   margin: auto;
   padding: 15px 25px 15px 25px;
   border: none;
   border-radius: 10px;
   color: #ffffff;
-  background-color: #666666;
+  background-color: #6666669f;
   font-size: 16px;
   cursor: pointer;
 }
